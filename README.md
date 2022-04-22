@@ -166,6 +166,12 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     }
 }
 ```
+---
+## Project Documentation
+
+This Project is using [Visual Crossing](https://www.visualcrossing.com/) for Weather API.
+
+For API Key, it will be saved on Firebase Remote Config and will be fetched on Apps Started.
 
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
