@@ -21,14 +21,26 @@ This project contains 3 flavors:
 To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
 
 ```sh
-# Development
-$ flutter run --flavor development --target lib/main_development.dart
-
-# Staging
-$ flutter run --flavor staging --target lib/main_staging.dart
-
-# Production
-$ flutter run --flavor production --target lib/main_production.dart
+# run build_runner once
+$ make build
+# watch file change
+$ make watch
+# generate dev apk
+$ make apk-dev
+# generate staging apk
+$ make apk-stg
+# generate production apk
+$ make apk-prod
+# generate dev ipa
+$ make ipa-dev
+# generate staging ipa
+$ make ipa-stg
+# generate production ipa
+$ make ipa-prod
+# fix code
+$ make fix
+# check fix
+$ make check-fix
 ```
 
 _\*Weather works on iOS, Android, Web, and Windows._
@@ -40,7 +52,8 @@ _\*Weather works on iOS, Android, Web, and Windows._
 To run all unit and widget tests use the following command:
 
 ```sh
-$ flutter test --coverage --test-randomize-ordering-seed random
+# run all test
+$ make test
 ```
 
 To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
