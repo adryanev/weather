@@ -12,6 +12,29 @@ Flutter Weather App
 
 ## Getting Started 🚀
 
+This project need **Firebase** to run.
+So you need a firebase account with 2 Projects, which is dev-staging, and production.
+
+You can place the dev-staging `google-services.json` and `google-services.plist` in folder below.
+
+```yaml
+# android
+ - android/app/src/development
+ - android/app/src/staging
+
+# ios
+
+```
+
+and for Production.
+
+```yaml
+# android
+  - android/app
+
+# ios
+```
+
 This project contains 3 flavors:
 
 - development
