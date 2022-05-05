@@ -3,6 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:weather/core/domain/failures/failure.dart';
 import 'package:weather/core/domain/usecases/use_case.dart';
+import 'package:weather/core/utils/constants.dart';
+import 'package:weather/features/splash/domain/entities/remote_config.dart';
 import 'package:weather/features/splash/domain/repositories/remote_config_repository.dart';
 import 'package:weather/features/splash/domain/usecases/fetch_remote_config_api_key_use_case.dart';
 
@@ -11,17 +13,17 @@ import '../repositories/remote_config_repository_mock.dart';
 void main() {
   late FetchRemoteConfigApiKeyUseCase systemUnderTest;
   late RemoteConfigRepository remoteConfigRepository;
-  late String apiKey;
+  late RemoteConfig<String, String> apiKey;
 
   setUp(() {
     remoteConfigRepository = RemoteConfigRepositoryMock();
     systemUnderTest = FetchRemoteConfigApiKeyUseCase(remoteConfigRepository);
   });
-  apiKey = 'Asd123';
+  apiKey = const RemoteConfig(key: remoteConfigApiKey, value: 'Asd12345');
 
   group('Fetch remote config api key use case', () {
     test(
-      'should return String Api Url when success',
+      'should return RemoteConfig Object of Api Key when success',
       () async {
         // arrange
         when(() => remoteConfigRepository.getApiKey())

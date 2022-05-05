@@ -10,6 +10,8 @@ dependencies:
   bloc: ^8.0.3
   dartz: ^0.10.1
   equatable: ^2.0.3
+  firebase_core: ^1.15.0
+  firebase_remote_config: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
@@ -21,10 +23,10 @@ dependencies:
   injectable: ^1.5.2
   intl: ^0.17.0
   json_serializable: ^6.1.5
-
 dev_dependencies:
   bloc_test: ^9.0.3
   build_runner: ^2.1.7
+  fake_firebase_remote_config: ^1.0.2
   flutter_test:
     sdk: flutter
   freezed: ^1.1.0

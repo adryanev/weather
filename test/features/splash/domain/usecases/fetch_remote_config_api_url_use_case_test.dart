@@ -3,6 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:weather/core/domain/failures/failure.dart';
 import 'package:weather/core/domain/usecases/use_case.dart';
+import 'package:weather/core/utils/constants.dart';
+import 'package:weather/features/splash/domain/entities/remote_config.dart';
 import 'package:weather/features/splash/domain/repositories/remote_config_repository.dart';
 import 'package:weather/features/splash/domain/usecases/fetch_remote_config_api_url_use_case.dart';
 
@@ -11,17 +13,20 @@ import '../repositories/remote_config_repository_mock.dart';
 void main() {
   late FetchRemoteConfigApiUrlUseCase systemUnderTest;
   late RemoteConfigRepository remoteConfigRepository;
-  late String apiUrl;
+  late RemoteConfig<String, String> apiUrl;
 
   setUp(() {
     remoteConfigRepository = RemoteConfigRepositoryMock();
     systemUnderTest = FetchRemoteConfigApiUrlUseCase(remoteConfigRepository);
-    apiUrl = 'https://google.com';
+    apiUrl = const RemoteConfig(
+      key: remoteConfigApiUrl,
+      value: 'https://google.com',
+    );
   });
 
   group('Fetch Remote Config Use Case', () {
     test(
-      'should return String Api Url when success',
+      'should return RemoteConfig Object Api Url when success',
       () async {
         // arrange
         when(() => remoteConfigRepository.getApiUrl())
