@@ -12,3 +12,10 @@ class RemoteConfigFailure extends Failure {
   @override
   List<Object?> get props => [message];
 }
+
+class LocalStorageFailure extends Failure {
+  const LocalStorageFailure(String message) : super(message);
+
+  @override
+  List<Object?> get props => [message];
+}
