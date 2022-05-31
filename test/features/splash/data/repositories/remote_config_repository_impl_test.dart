@@ -3,19 +3,24 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:weather/core/domain/failures/failure.dart';
 import 'package:weather/core/utils/constants.dart';
+import 'package:weather/features/splash/data/datasources/local_config_data_source.dart';
 import 'package:weather/features/splash/data/datasources/remote_config_data_source.dart';
 import 'package:weather/features/splash/data/repositories/remote_config_repository_impl.dart';
 import 'package:weather/features/splash/domain/entities/remote_config.dart';
 
+import '../datasources/local_config_data_source_mock.dart';
 import '../datasources/remote_config_data_source_mock.dart';
 
 void main() {
   late RemoteConfigRepositoryImpl systemUnderTest;
   late RemoteConfigDataSource dataSource;
+  late LocalConfigDataSource localConfigDataSource;
 
   setUp(() {
+    localConfigDataSource = LocalConfigDataSourceMock();
     dataSource = RemoteConfigDataSourceMock();
-    systemUnderTest = RemoteConfigRepositoryImpl(dataSource);
+    systemUnderTest =
+        RemoteConfigRepositoryImpl(dataSource, localConfigDataSource);
   });
 
   group('RemoteConfigRepositoryImpl getApiKey', () {
