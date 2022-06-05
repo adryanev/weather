@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "737271602056",
+    "project_id": "flutter-weather-23117",
+    "storage_bucket": "flutter-weather-23117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737271602056:android:09c40c43c836b4e225383d",
+        "android_client_info": {
+          "package_name": "dev.adryanev.weather.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737271602056-o0jie0ft4tmvil097hog0eoh7hlh62hc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.adryanev.weather.dev",
+            "certificate_hash": "4638a285e6d8ec49ad284953958bd5d9a93aae20"
+          }
+        },
+        {
+          "client_id": "737271602056-rtje7dmu3t2fkigrkutfiin0f6d31ihp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRDcwodxxJGeiHszv7SQJC52BDRaWSIrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737271602056-rtje7dmu3t2fkigrkutfiin0f6d31ihp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "737271602056-1g1sf6kkstv5h5q6627nm3jknl4fbtfq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.adryanev.weather.stg"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737271602056:android:1932c9b66eb5162725383d",
+        "android_client_info": {
+          "package_name": "dev.adryanev.weather.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737271602056-mr6l90inmoup53413o3nuebt1d8hmjtg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.adryanev.weather.stg",
+            "certificate_hash": "4638a285e6d8ec49ad284953958bd5d9a93aae20"
+          }
+        },
+        {
+          "client_id": "737271602056-rtje7dmu3t2fkigrkutfiin0f6d31ihp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRDcwodxxJGeiHszv7SQJC52BDRaWSIrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737271602056-rtje7dmu3t2fkigrkutfiin0f6d31ihp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "737271602056-1g1sf6kkstv5h5q6627nm3jknl4fbtfq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.adryanev.weather.stg"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
