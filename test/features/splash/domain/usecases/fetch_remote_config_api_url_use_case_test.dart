@@ -19,7 +19,7 @@ void main() {
     remoteConfigRepository = RemoteConfigRepositoryMock();
     systemUnderTest = FetchRemoteConfigApiUrlUseCase(remoteConfigRepository);
     apiUrl = const RemoteConfig(
-      key: remoteConfigApiUrl,
+      key: KeyConstants.remoteConfigApiUrl,
       value: 'https://google.com',
     );
   });
@@ -49,9 +49,7 @@ void main() {
         // arrange
         when(() => remoteConfigRepository.getApiUrl()).thenAnswer(
           (_) async => left(
-            const RemoteConfigFailure(
-              'cannot fetch remote config',
-            ),
+            const Failure.remoteConfigFailure(),
           ),
         );
         // act

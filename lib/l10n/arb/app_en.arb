@@ -1,7 +1,13 @@
 {
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
+  "@@locale": "en",
+  "remoteConfigFailure": "Cannot get data from remote config.",
+  "preferenceFailure": "Cannot get data from session.",
+  "locationFailure": "Cannot get your current location",
+  "locationPermissionFailure": "Please allow us to use your location",
+  "splashInitializing": "Initializing...",
+  "splashGetApiKey": "Getting weather API key...",
+  "splashGetApiUrl": "Getting weather API url...",
+  "splashSaveApiKey": "Saving API key...",
+  "splashSaveApiUrl": "Saving API url...",
+  "done": "Done"
 }

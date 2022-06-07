@@ -1,0 +1,13 @@
+{
+  "@@locale": "id",
+  "remoteConfigFailure": "Tidak bisa mengambil data dari remote config.",
+  "preferenceFailure": "Tidak bisa mengambil data dari session.",
+  "locationFailure": "Tidak bisa membaca lokasi anda sekarang.",
+  "locationPermissionFailure": "Mohon berikan izin agar kami bisa mengakses lokasi anda.",
+  "splashInitializing": "Memulai...",
+  "splashGetApiKey": "Mendapatkan API key...",
+  "splashGetApiUrl": "Mendapatkan weather API url...",
+  "splashSaveApiKey": "Menyimpan API key...",
+  "splashSaveApiUrl": "Menyimpan API url...",
+  "done": "Selesai"
+}

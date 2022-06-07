@@ -16,20 +16,20 @@ class RemoteConfigDataSourceImpl implements RemoteConfigDataSource {
   @override
   Future<Either<Failure, String>> getApiKey() async {
     try {
-      final data = _remoteConfig.getString(remoteConfigApiKey);
+      final data = _remoteConfig.getString(KeyConstants.remoteConfigApiKey);
       return right(data);
     } on Exception catch (_) {
-      return left(RemoteConfigFailure(_.toString()));
+      return left(const Failure.remoteConfigFailure());
     }
   }
 
   @override
   Future<Either<Failure, String>> getApiUrl() async {
     try {
-      final data = _remoteConfig.getString(remoteConfigApiUrl);
+      final data = _remoteConfig.getString(KeyConstants.remoteConfigApiUrl);
       return right(data);
     } on Exception catch (_) {
-      return left(RemoteConfigFailure(_.toString()));
+      return left(const Failure.remoteConfigFailure());
     }
   }
 }

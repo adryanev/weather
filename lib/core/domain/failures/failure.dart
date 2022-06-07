@@ -1,21 +1,10 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'failure.freezed.dart';
 
-abstract class Failure extends Equatable {
-  const Failure(this.message);
-
-  final String message;
-}
-
-class RemoteConfigFailure extends Failure {
-  const RemoteConfigFailure(String message) : super(message);
-
-  @override
-  List<Object?> get props => [message];
-}
-
-class LocalStorageFailure extends Failure {
-  const LocalStorageFailure(String message) : super(message);
-
-  @override
-  List<Object?> get props => [message];
+@freezed
+class Failure with _$Failure {
+  const factory Failure.remoteConfigFailure() = RemoteConfigFailure;
+  const factory Failure.preferenceFailure() = PreferenceFailure;
+  const factory Failure.locationFailure() = LocationFailure;
+  const factory Failure.locationPermissionFailure() = LocationPermissionFailure;
 }

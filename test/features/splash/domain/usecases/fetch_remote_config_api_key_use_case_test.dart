@@ -19,7 +19,10 @@ void main() {
     remoteConfigRepository = RemoteConfigRepositoryMock();
     systemUnderTest = FetchRemoteConfigApiKeyUseCase(remoteConfigRepository);
   });
-  apiKey = const RemoteConfig(key: remoteConfigApiKey, value: 'Asd12345');
+  apiKey = const RemoteConfig(
+    key: KeyConstants.remoteConfigApiKey,
+    value: 'Asd12345',
+  );
 
   group('Fetch remote config api key use case', () {
     test(
@@ -46,9 +49,7 @@ void main() {
         // arrange
         when(() => remoteConfigRepository.getApiKey()).thenAnswer(
           (_) async => left(
-            const RemoteConfigFailure(
-              'cannot fetch remote config',
-            ),
+            const Failure.remoteConfigFailure(),
           ),
         );
         // act
