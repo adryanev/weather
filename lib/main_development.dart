@@ -7,7 +7,8 @@
 
 import 'package:weather/app/app.dart';
 import 'package:weather/bootstrap.dart';
+import 'package:weather/core/utils/constants.dart';
 
 void main() {
-  bootstrap(() => const App());
+  bootstrap(() => const App(), environment: Environment.envDev);
 }
