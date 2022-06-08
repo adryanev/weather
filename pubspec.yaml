@@ -15,6 +15,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
+  flutter_flipperkit: ^0.0.28
   flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.5.3+2
