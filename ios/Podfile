@@ -29,35 +29,8 @@ flutter_ios_podfile_setup
 
 target 'Runner' do
   use_frameworks!
- # use_modular_headers!
-  # If you use `use_frameworks!` in your Podfile,
-  # uncomment the below $static_framework array and also
-  # the pre_install section.  This will cause Flipper and
-  # it's dependencies to be built as a static library and all other pods to
-  # be dynamic.
-  #
-  # NOTE Doing this may lead to a broken build if any of these are also
-  #      transitive dependencies of other dependencies and are expected
-  #      to be built as frameworks.
-  #
-  $static_framework = ['FlipperKit', 'Flipper', 'Flipper-Folly',
-    'CocoaAsyncSocket', 'ComponentKit', 'Flipper-DoubleConversion',
-    'Flipper-Glog', 'Flipper-PeerTalk', 'Flipper-RSocket', 'Yoga', 
-'YogaKit',
-    'CocoaLibEvent', 'OpenSSL-Universal', 'boost-for-react-native']
-
-  pre_install do |installer|
-    Pod::Installer::Xcode::TargetValidator.send(:define_method, 
-:verify_no_static_framework_transitive_dependencies) {}
-    installer.pod_targets.each do |pod|
-        if $static_framework.include?(pod.name)
-          def pod.build_type;
-            Pod::BuildType.static_library
-          end
-        end
-      end
-  end
-
+  use_modular_headers!
+  
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
