@@ -20,7 +20,7 @@ class RemoteConfigRepositoryImpl implements RemoteConfigRepository {
     final data = await _dataSource.getApiKey();
     return data.map(
       (r) => RemoteConfig(
-        key: remoteConfigApiKey,
+        key: KeyConstants.remoteConfigApiKey,
         value: r,
       ),
     );
@@ -31,7 +31,7 @@ class RemoteConfigRepositoryImpl implements RemoteConfigRepository {
     final data = await _dataSource.getApiUrl();
     return data.map(
       (r) => RemoteConfig(
-        key: remoteConfigApiUrl,
+        key: KeyConstants.remoteConfigApiUrl,
         value: r,
       ),
     );

@@ -18,7 +18,7 @@ class LocalConfigDataSourceImpl implements LocalConfigDataSource {
       await _localStorage.setApiKey(apiKey);
       return right(unit);
     } catch (e) {
-      return left(LocalStorageFailure(e.toString()));
+      return left(const Failure.preferenceFailure());
     }
   }
 
@@ -28,7 +28,7 @@ class LocalConfigDataSourceImpl implements LocalConfigDataSource {
       await _localStorage.setApiUrl(apiUrl);
       return right(unit);
     } catch (e) {
-      return left(LocalStorageFailure(e.toString()));
+      return left(const Failure.preferenceFailure());
     }
   }
 }

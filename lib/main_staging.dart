@@ -10,5 +10,5 @@ import 'package:weather/bootstrap.dart';
 import 'package:weather/core/utils/constants.dart';
 
 void main() {
-  bootstrap(() => const App(), environment: envProd);
+  bootstrap(() => const App(), environment: Environment.envProd);
 }

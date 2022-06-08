@@ -28,7 +28,10 @@ void main() {
     late RemoteConfig<String, String> remoteConfig;
     setUp(() {
       apiKey = 'Asd12345';
-      remoteConfig = RemoteConfig(key: remoteConfigApiKey, value: apiKey);
+      remoteConfig = RemoteConfig(
+        key: KeyConstants.remoteConfigApiKey,
+        value: apiKey,
+      );
     });
     test(
       'should return RemoteConfig Object when Success',
@@ -53,9 +56,7 @@ void main() {
         // arrange
         when(() => dataSource.getApiKey()).thenAnswer(
           (_) async => left(
-            const RemoteConfigFailure(
-              'cannot fetch remote config',
-            ),
+            const Failure.remoteConfigFailure(),
           ),
         );
         // act
@@ -73,7 +74,8 @@ void main() {
     late RemoteConfig<String, String> remoteConfig;
     setUp(() {
       apiUrl = 'https://google.com';
-      remoteConfig = RemoteConfig(key: remoteConfigApiUrl, value: apiUrl);
+      remoteConfig =
+          RemoteConfig(key: KeyConstants.remoteConfigApiUrl, value: apiUrl);
     });
     test(
       'should return RemoteConfig Object when Success',
@@ -98,9 +100,7 @@ void main() {
         // arrange
         when(() => dataSource.getApiUrl()).thenAnswer(
           (_) async => left(
-            const RemoteConfigFailure(
-              'cannot fetch remote config',
-            ),
+            const Failure.remoteConfigFailure(),
           ),
         );
         // act

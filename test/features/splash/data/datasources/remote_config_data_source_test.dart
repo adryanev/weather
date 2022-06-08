@@ -14,13 +14,13 @@ Future<void> main() async {
   const apiUrl = 'https://google.com';
   final config = FakeRemoteConfig();
   await config.setDefaults(<String, dynamic>{
-    remoteConfigApiKey: '',
-    remoteConfigApiUrl: '',
+    KeyConstants.remoteConfigApiKey: '',
+    KeyConstants.remoteConfigApiUrl: '',
   });
 
   config.loadMockData(<String, dynamic>{
-    remoteConfigApiKey: apiKey,
-    remoteConfigApiUrl: apiUrl,
+    KeyConstants.remoteConfigApiKey: apiKey,
+    KeyConstants.remoteConfigApiUrl: apiUrl,
   });
 
   await config.fetchAndActivate();
