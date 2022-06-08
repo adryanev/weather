@@ -4,15 +4,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather/core/presentation/mixins/error_message_handler.dart';
 import 'package:weather/core/utils/colors.dart';
 import 'package:weather/features/splash/presentation/cubit/splash_cubit.dart';
+import 'package:weather/features/splash/presentation/widgets/status_text.dart';
 import 'package:weather/injector.dart';
+import 'package:weather/l10n/l10n.dart';
 
 class SplashPage extends StatelessWidget with ErrorMessageHandler {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return BlocProvider(
-      create: (context) => getIt<SplashCubit>(),
+      create: (context) => getIt<SplashCubit>()..fetchApiKey(),
       child: BlocListener<SplashCubit, SplashState>(
         listener: (context, state) {
           state.fetchApiKeyOrFailureOption.fold(
@@ -48,15 +51,30 @@ class SplashPage extends StatelessWidget with ErrorMessageHandler {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Center(child: Text('Weather')),
+                Center(
+                  child: Text(
+                    l10n.appName,
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                ),
                 SizedBox(
                   height: 12.h,
                 ),
-                const Text('Status'),
+                const StatusText(),
                 SizedBox(
                   height: 24.h,
                 ),
-                const CircularProgressIndicator.adaptive(),
+                BlocSelector<SplashCubit, SplashState, bool>(
+                  selector: (state) => state.isLoading,
+                  builder: (context, isLoading) => isLoading
+                      ? const CircularProgressIndicator.adaptive(
+                          backgroundColor: AppColor.white,
+                        )
+                      : const Icon(
+                          Icons.check_rounded,
+                          color: AppColor.white,
+                        ),
+                ),
               ],
             ),
           ),

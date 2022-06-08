@@ -1,5 +1,6 @@
 {
   "@@locale": "id",
+  "appName": "Weather",
   "remoteConfigFailure": "Tidak bisa mengambil data dari remote config.",
   "preferenceFailure": "Tidak bisa mengambil data dari session.",
   "locationFailure": "Tidak bisa membaca lokasi anda sekarang.",
