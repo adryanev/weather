@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		9BEB617D2850E63500E9E32E /* Runner-Noop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEB617C2850E63500E9E32E /* Runner-Noop.swift */; };
 		ABD515954A321C75B40CE773 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB8DE7FC5CBFCB2A6736CC3 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		9B152F552820327700C37CAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B152F562820328900C37CAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B152F572820333300C37CAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9BEB617C2850E63500E9E32E /* Runner-Noop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runner-Noop.swift"; sourceTree = "<group>"; };
 		A836E5418DB151E9EC3B3B6A /* Pods-Runner.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-staging.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-staging.xcconfig"; sourceTree = "<group>"; };
 		DF8D330B17341B8B6C07E47E /* Pods-Runner.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-development.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-development.xcconfig"; sourceTree = "<group>"; };
 		EEB8DE7FC5CBFCB2A6736CC3 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +83,6 @@
 				88178122AA079EDC9AFDD6E5 /* Pods-Runner.profile-development.xcconfig */,
 				1072F8DFADA4B9B380F9F725 /* Pods-Runner.profile-staging.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,7 +128,6 @@
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
-				9BEB617C2850E63500E9E32E /* Runner-Noop.swift */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -346,7 +342,6 @@
 			files = (
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
-				9BEB617D2850E63500E9E32E /* Runner-Noop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
