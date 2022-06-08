@@ -57,5 +57,7 @@
 		<key>weather</key>
 		<string>Weather needs to access device&apos;s precise location for accurate weather prediction</string>
 	</dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 </dict>
 </plist>
