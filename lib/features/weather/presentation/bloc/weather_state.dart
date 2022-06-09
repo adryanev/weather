@@ -1,9 +1,6 @@
 part of 'weather_bloc.dart';
 
-abstract class WeatherState extends Equatable {
-  const WeatherState();  
-
-  @override
-  List<Object> get props => [];
+@freezed
+class WeatherState with _$WeatherState {
+  const factory WeatherState.initial() = _Initial;
 }
-class WeatherInitial extends WeatherState {}

@@ -53,7 +53,7 @@ class App extends StatelessWidget {
             theme: ThemeData(
               primaryColor: AppColor.blue,
               fontFamily: GoogleFonts.poppins().fontFamily,
-              textTheme: Typography.englishLike2021.apply(
+              textTheme: Typography.englishLike2018.apply(
                 fontSizeFactor: 1.sp,
               ),
             ),
