@@ -30,7 +30,7 @@ class _$WeatherTearOff {
       required List<String>? precipitationTypes,
       required double windGust,
       required double windSpeed,
-      required double winDirection,
+      required double windDirection,
       required double pressure,
       required double visibility,
       required double cloudCover,
@@ -56,7 +56,7 @@ class _$WeatherTearOff {
       precipitationTypes: precipitationTypes,
       windGust: windGust,
       windSpeed: windSpeed,
-      winDirection: winDirection,
+      windDirection: windDirection,
       pressure: pressure,
       visibility: visibility,
       cloudCover: cloudCover,
@@ -90,7 +90,7 @@ mixin _$Weather {
   List<String>? get precipitationTypes => throw _privateConstructorUsedError;
   double get windGust => throw _privateConstructorUsedError;
   double get windSpeed => throw _privateConstructorUsedError;
-  double get winDirection => throw _privateConstructorUsedError;
+  double get windDirection => throw _privateConstructorUsedError;
   double get pressure => throw _privateConstructorUsedError;
   double get visibility => throw _privateConstructorUsedError;
   double get cloudCover => throw _privateConstructorUsedError;
@@ -125,7 +125,7 @@ abstract class $WeatherCopyWith<$Res> {
       List<String>? precipitationTypes,
       double windGust,
       double windSpeed,
-      double winDirection,
+      double windDirection,
       double pressure,
       double visibility,
       double cloudCover,
@@ -162,7 +162,7 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
     Object? precipitationTypes = freezed,
     Object? windGust = freezed,
     Object? windSpeed = freezed,
-    Object? winDirection = freezed,
+    Object? windDirection = freezed,
     Object? pressure = freezed,
     Object? visibility = freezed,
     Object? cloudCover = freezed,
@@ -225,9 +225,9 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
               as double,
-      winDirection: winDirection == freezed
-          ? _value.winDirection
-          : winDirection // ignore: cast_nullable_to_non_nullable
+      windDirection: windDirection == freezed
+          ? _value.windDirection
+          : windDirection // ignore: cast_nullable_to_non_nullable
               as double,
       pressure: pressure == freezed
           ? _value.pressure
@@ -299,7 +299,7 @@ abstract class _$WeatherCopyWith<$Res> implements $WeatherCopyWith<$Res> {
       List<String>? precipitationTypes,
       double windGust,
       double windSpeed,
-      double winDirection,
+      double windDirection,
       double pressure,
       double visibility,
       double cloudCover,
@@ -337,7 +337,7 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
     Object? precipitationTypes = freezed,
     Object? windGust = freezed,
     Object? windSpeed = freezed,
-    Object? winDirection = freezed,
+    Object? windDirection = freezed,
     Object? pressure = freezed,
     Object? visibility = freezed,
     Object? cloudCover = freezed,
@@ -400,9 +400,9 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
               as double,
-      winDirection: winDirection == freezed
-          ? _value.winDirection
-          : winDirection // ignore: cast_nullable_to_non_nullable
+      windDirection: windDirection == freezed
+          ? _value.windDirection
+          : windDirection // ignore: cast_nullable_to_non_nullable
               as double,
       pressure: pressure == freezed
           ? _value.pressure
@@ -472,7 +472,7 @@ class _$_Weather implements _Weather {
       required this.precipitationTypes,
       required this.windGust,
       required this.windSpeed,
-      required this.winDirection,
+      required this.windDirection,
       required this.pressure,
       required this.visibility,
       required this.cloudCover,
@@ -511,7 +511,7 @@ class _$_Weather implements _Weather {
   @override
   final double windSpeed;
   @override
-  final double winDirection;
+  final double windDirection;
   @override
   final double pressure;
   @override
@@ -539,7 +539,7 @@ class _$_Weather implements _Weather {
 
   @override
   String toString() {
-    return 'Weather(dateTime: $dateTime, temperature: $temperature, feelsLike: $feelsLike, humidity: $humidity, dew: $dew, precipitation: $precipitation, precipitationProbability: $precipitationProbability, snow: $snow, snowDepth: $snowDepth, precipitationTypes: $precipitationTypes, windGust: $windGust, windSpeed: $windSpeed, winDirection: $winDirection, pressure: $pressure, visibility: $visibility, cloudCover: $cloudCover, solarRadiation: $solarRadiation, solarEnergy: $solarEnergy, uvIndex: $uvIndex, severeRisk: $severeRisk, condition: $condition, icon: $icon, stations: $stations, source: $source, hours: $hours)';
+    return 'Weather(dateTime: $dateTime, temperature: $temperature, feelsLike: $feelsLike, humidity: $humidity, dew: $dew, precipitation: $precipitation, precipitationProbability: $precipitationProbability, snow: $snow, snowDepth: $snowDepth, precipitationTypes: $precipitationTypes, windGust: $windGust, windSpeed: $windSpeed, windDirection: $windDirection, pressure: $pressure, visibility: $visibility, cloudCover: $cloudCover, solarRadiation: $solarRadiation, solarEnergy: $solarEnergy, uvIndex: $uvIndex, severeRisk: $severeRisk, condition: $condition, icon: $icon, stations: $stations, source: $source, hours: $hours)';
   }
 
   @override
@@ -564,7 +564,7 @@ class _$_Weather implements _Weather {
             const DeepCollectionEquality().equals(other.windGust, windGust) &&
             const DeepCollectionEquality().equals(other.windSpeed, windSpeed) &&
             const DeepCollectionEquality()
-                .equals(other.winDirection, winDirection) &&
+                .equals(other.windDirection, windDirection) &&
             const DeepCollectionEquality().equals(other.pressure, pressure) &&
             const DeepCollectionEquality()
                 .equals(other.visibility, visibility) &&
@@ -599,7 +599,7 @@ class _$_Weather implements _Weather {
         const DeepCollectionEquality().hash(precipitationTypes),
         const DeepCollectionEquality().hash(windGust),
         const DeepCollectionEquality().hash(windSpeed),
-        const DeepCollectionEquality().hash(winDirection),
+        const DeepCollectionEquality().hash(windDirection),
         const DeepCollectionEquality().hash(pressure),
         const DeepCollectionEquality().hash(visibility),
         const DeepCollectionEquality().hash(cloudCover),
@@ -634,7 +634,7 @@ abstract class _Weather implements Weather {
       required List<String>? precipitationTypes,
       required double windGust,
       required double windSpeed,
-      required double winDirection,
+      required double windDirection,
       required double pressure,
       required double visibility,
       required double cloudCover,
@@ -673,7 +673,7 @@ abstract class _Weather implements Weather {
   @override
   double get windSpeed;
   @override
-  double get winDirection;
+  double get windDirection;
   @override
   double get pressure;
   @override

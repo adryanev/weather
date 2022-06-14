@@ -20,6 +20,16 @@ class _$WeatherEventTearOff {
   _Started started() {
     return const _Started();
   }
+
+  WeatherGetCurrentLocation getCurrentLocation() {
+    return const WeatherGetCurrentLocation();
+  }
+
+  WeatherGetByLocation getWeatherByLocation(Location location) {
+    return WeatherGetByLocation(
+      location,
+    );
+  }
 }
 
 /// @nodoc
@@ -30,32 +40,45 @@ mixin _$WeatherEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getCurrentLocation,
+    required TResult Function(Location location) getWeatherByLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(WeatherGetCurrentLocation value)
+        getCurrentLocation,
+    required TResult Function(WeatherGetByLocation value) getWeatherByLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -116,6 +139,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() getCurrentLocation,
+    required TResult Function(Location location) getWeatherByLocation,
   }) {
     return started();
   }
@@ -124,6 +149,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
   }) {
     return started?.call();
   }
@@ -132,6 +159,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -144,6 +173,9 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(WeatherGetCurrentLocation value)
+        getCurrentLocation,
+    required TResult Function(WeatherGetByLocation value) getWeatherByLocation,
   }) {
     return started(this);
   }
@@ -152,6 +184,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
   }) {
     return started?.call(this);
   }
@@ -160,6 +194,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -174,11 +210,285 @@ abstract class _Started implements WeatherEvent {
 }
 
 /// @nodoc
+abstract class $WeatherGetCurrentLocationCopyWith<$Res> {
+  factory $WeatherGetCurrentLocationCopyWith(WeatherGetCurrentLocation value,
+          $Res Function(WeatherGetCurrentLocation) then) =
+      _$WeatherGetCurrentLocationCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$WeatherGetCurrentLocationCopyWithImpl<$Res>
+    extends _$WeatherEventCopyWithImpl<$Res>
+    implements $WeatherGetCurrentLocationCopyWith<$Res> {
+  _$WeatherGetCurrentLocationCopyWithImpl(WeatherGetCurrentLocation _value,
+      $Res Function(WeatherGetCurrentLocation) _then)
+      : super(_value, (v) => _then(v as WeatherGetCurrentLocation));
+
+  @override
+  WeatherGetCurrentLocation get _value =>
+      super._value as WeatherGetCurrentLocation;
+}
+
+/// @nodoc
+
+class _$WeatherGetCurrentLocation implements WeatherGetCurrentLocation {
+  const _$WeatherGetCurrentLocation();
+
+  @override
+  String toString() {
+    return 'WeatherEvent.getCurrentLocation()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is WeatherGetCurrentLocation);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getCurrentLocation,
+    required TResult Function(Location location) getWeatherByLocation,
+  }) {
+    return getCurrentLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
+  }) {
+    return getCurrentLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
+    required TResult orElse(),
+  }) {
+    if (getCurrentLocation != null) {
+      return getCurrentLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(WeatherGetCurrentLocation value)
+        getCurrentLocation,
+    required TResult Function(WeatherGetByLocation value) getWeatherByLocation,
+  }) {
+    return getCurrentLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
+  }) {
+    return getCurrentLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
+    required TResult orElse(),
+  }) {
+    if (getCurrentLocation != null) {
+      return getCurrentLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WeatherGetCurrentLocation implements WeatherEvent {
+  const factory WeatherGetCurrentLocation() = _$WeatherGetCurrentLocation;
+}
+
+/// @nodoc
+abstract class $WeatherGetByLocationCopyWith<$Res> {
+  factory $WeatherGetByLocationCopyWith(WeatherGetByLocation value,
+          $Res Function(WeatherGetByLocation) then) =
+      _$WeatherGetByLocationCopyWithImpl<$Res>;
+  $Res call({Location location});
+
+  $LocationCopyWith<$Res> get location;
+}
+
+/// @nodoc
+class _$WeatherGetByLocationCopyWithImpl<$Res>
+    extends _$WeatherEventCopyWithImpl<$Res>
+    implements $WeatherGetByLocationCopyWith<$Res> {
+  _$WeatherGetByLocationCopyWithImpl(
+      WeatherGetByLocation _value, $Res Function(WeatherGetByLocation) _then)
+      : super(_value, (v) => _then(v as WeatherGetByLocation));
+
+  @override
+  WeatherGetByLocation get _value => super._value as WeatherGetByLocation;
+
+  @override
+  $Res call({
+    Object? location = freezed,
+  }) {
+    return _then(WeatherGetByLocation(
+      location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Location,
+    ));
+  }
+
+  @override
+  $LocationCopyWith<$Res> get location {
+    return $LocationCopyWith<$Res>(_value.location, (value) {
+      return _then(_value.copyWith(location: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$WeatherGetByLocation implements WeatherGetByLocation {
+  const _$WeatherGetByLocation(this.location);
+
+  @override
+  final Location location;
+
+  @override
+  String toString() {
+    return 'WeatherEvent.getWeatherByLocation(location: $location)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is WeatherGetByLocation &&
+            const DeepCollectionEquality().equals(other.location, location));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(location));
+
+  @JsonKey(ignore: true)
+  @override
+  $WeatherGetByLocationCopyWith<WeatherGetByLocation> get copyWith =>
+      _$WeatherGetByLocationCopyWithImpl<WeatherGetByLocation>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getCurrentLocation,
+    required TResult Function(Location location) getWeatherByLocation,
+  }) {
+    return getWeatherByLocation(location);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
+  }) {
+    return getWeatherByLocation?.call(location);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getCurrentLocation,
+    TResult Function(Location location)? getWeatherByLocation,
+    required TResult orElse(),
+  }) {
+    if (getWeatherByLocation != null) {
+      return getWeatherByLocation(location);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(WeatherGetCurrentLocation value)
+        getCurrentLocation,
+    required TResult Function(WeatherGetByLocation value) getWeatherByLocation,
+  }) {
+    return getWeatherByLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
+  }) {
+    return getWeatherByLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(WeatherGetCurrentLocation value)? getCurrentLocation,
+    TResult Function(WeatherGetByLocation value)? getWeatherByLocation,
+    required TResult orElse(),
+  }) {
+    if (getWeatherByLocation != null) {
+      return getWeatherByLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WeatherGetByLocation implements WeatherEvent {
+  const factory WeatherGetByLocation(Location location) =
+      _$WeatherGetByLocation;
+
+  Location get location;
+  @JsonKey(ignore: true)
+  $WeatherGetByLocationCopyWith<WeatherGetByLocation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 class _$WeatherStateTearOff {
   const _$WeatherStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
+  _WeatherState call(
+      {required bool isLoading,
+      required Option<Either<Failure, Location>> locationOrFailureOption,
+      required Option<Either<Failure, List<Weather>>>
+          weatherListOrFailureOption}) {
+    return _WeatherState(
+      isLoading: isLoading,
+      locationOrFailureOption: locationOrFailureOption,
+      weatherListOrFailureOption: weatherListOrFailureOption,
+    );
   }
 }
 
@@ -187,37 +497,14 @@ const $WeatherState = _$WeatherStateTearOff();
 
 /// @nodoc
 mixin _$WeatherState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
+  bool get isLoading => throw _privateConstructorUsedError;
+  Option<Either<Failure, Location>> get locationOrFailureOption =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) =>
+  Option<Either<Failure, List<Weather>>> get weatherListOrFailureOption =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+
+  @JsonKey(ignore: true)
+  $WeatherStateCopyWith<WeatherState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -226,6 +513,10 @@ abstract class $WeatherStateCopyWith<$Res> {
   factory $WeatherStateCopyWith(
           WeatherState value, $Res Function(WeatherState) then) =
       _$WeatherStateCopyWithImpl<$Res>;
+  $Res call(
+      {bool isLoading,
+      Option<Either<Failure, Location>> locationOrFailureOption,
+      Option<Either<Failure, List<Weather>>> weatherListOrFailureOption});
 }
 
 /// @nodoc
@@ -235,100 +526,136 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
   final WeatherState _value;
   // ignore: unused_field
   final $Res Function(WeatherState) _then;
-}
-
-/// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  $Res call({
+    Object? isLoading = freezed,
+    Object? locationOrFailureOption = freezed,
+    Object? weatherListOrFailureOption = freezed,
+  }) {
+    return _then(_value.copyWith(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      locationOrFailureOption: locationOrFailureOption == freezed
+          ? _value.locationOrFailureOption
+          : locationOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, Location>>,
+      weatherListOrFailureOption: weatherListOrFailureOption == freezed
+          ? _value.weatherListOrFailureOption
+          : weatherListOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, List<Weather>>>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$WeatherStateCopyWith<$Res>
+    implements $WeatherStateCopyWith<$Res> {
+  factory _$WeatherStateCopyWith(
+          _WeatherState value, $Res Function(_WeatherState) then) =
+      __$WeatherStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {bool isLoading,
+      Option<Either<Failure, Location>> locationOrFailureOption,
+      Option<Either<Failure, List<Weather>>> weatherListOrFailureOption});
+}
+
+/// @nodoc
+class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
+    implements _$WeatherStateCopyWith<$Res> {
+  __$WeatherStateCopyWithImpl(
+      _WeatherState _value, $Res Function(_WeatherState) _then)
+      : super(_value, (v) => _then(v as _WeatherState));
+
+  @override
+  _WeatherState get _value => super._value as _WeatherState;
+
+  @override
+  $Res call({
+    Object? isLoading = freezed,
+    Object? locationOrFailureOption = freezed,
+    Object? weatherListOrFailureOption = freezed,
+  }) {
+    return _then(_WeatherState(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      locationOrFailureOption: locationOrFailureOption == freezed
+          ? _value.locationOrFailureOption
+          : locationOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, Location>>,
+      weatherListOrFailureOption: weatherListOrFailureOption == freezed
+          ? _value.weatherListOrFailureOption
+          : weatherListOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, List<Weather>>>,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_WeatherState implements _WeatherState {
+  const _$_WeatherState(
+      {required this.isLoading,
+      required this.locationOrFailureOption,
+      required this.weatherListOrFailureOption});
+
+  @override
+  final bool isLoading;
+  @override
+  final Option<Either<Failure, Location>> locationOrFailureOption;
+  @override
+  final Option<Either<Failure, List<Weather>>> weatherListOrFailureOption;
 
   @override
   String toString() {
-    return 'WeatherState.initial()';
+    return 'WeatherState(isLoading: $isLoading, locationOrFailureOption: $locationOrFailureOption, weatherListOrFailureOption: $weatherListOrFailureOption)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
+        (other.runtimeType == runtimeType &&
+            other is _WeatherState &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(
+                other.locationOrFailureOption, locationOrFailureOption) &&
+            const DeepCollectionEquality().equals(
+                other.weatherListOrFailureOption, weatherListOrFailureOption));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(locationOrFailureOption),
+      const DeepCollectionEquality().hash(weatherListOrFailureOption));
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  _$WeatherStateCopyWith<_WeatherState> get copyWith =>
+      __$WeatherStateCopyWithImpl<_WeatherState>(this, _$identity);
 }
 
-abstract class _Initial implements WeatherState {
-  const factory _Initial() = _$_Initial;
+abstract class _WeatherState implements WeatherState {
+  const factory _WeatherState(
+      {required bool isLoading,
+      required Option<Either<Failure, Location>> locationOrFailureOption,
+      required Option<Either<Failure, List<Weather>>>
+          weatherListOrFailureOption}) = _$_WeatherState;
+
+  @override
+  bool get isLoading;
+  @override
+  Option<Either<Failure, Location>> get locationOrFailureOption;
+  @override
+  Option<Either<Failure, List<Weather>>> get weatherListOrFailureOption;
+  @override
+  @JsonKey(ignore: true)
+  _$WeatherStateCopyWith<_WeatherState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

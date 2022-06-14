@@ -16,7 +16,7 @@ class Weather with _$Weather {
     required List<String>? precipitationTypes,
     required double windGust,
     required double windSpeed,
-    required double winDirection,
+    required double windDirection,
     required double pressure,
     required double visibility,
     required double cloudCover,

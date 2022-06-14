@@ -9,6 +9,7 @@ environment:
 dependencies:
   bloc: ^8.0.3
   dartz: ^0.10.1
+  dio: ^4.0.6
   equatable: ^2.0.3
   firebase_core: ^1.15.0
   firebase_remote_config: ^2.0.5
@@ -27,7 +28,9 @@ dependencies:
   google_fonts: ^3.0.1
   injectable: ^1.5.2
   intl: ^0.17.0
-  json_serializable: ^6.1.5
+  json_annotation: ^4.5.0
+  pretty_dio_logger: ^1.1.1
+  retrofit: ^3.0.1+1
 
 dev_dependencies:
   bloc_test: ^9.0.3
@@ -38,7 +41,9 @@ dev_dependencies:
     sdk: flutter
   freezed: ^1.1.0
   injectable_generator: ^1.5.2
+  json_serializable: ^6.1.5
   mocktail: ^0.2.0
+  retrofit_generator: ^3.0.1
   very_good_analysis: ^2.4.0
 
 flutter_gen:

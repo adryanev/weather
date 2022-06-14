@@ -5,6 +5,7 @@
   "preferenceFailure": "Cannot get data from session.",
   "locationFailure": "Cannot get your current location",
   "locationPermissionFailure": "Please allow us to use your location",
+  "remoteFailure": "Cannot fetch data from server",
   "splashInitializing": "Initializing...",
   "splashGetApiKey": "Getting weather API key...",
   "splashGetApiUrl": "Getting weather API url...",

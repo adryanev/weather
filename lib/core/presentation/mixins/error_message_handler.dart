@@ -12,6 +12,7 @@ mixin ErrorMessageHandler {
       locationFailure: () => context.displayFlash(l10n.locationFailure),
       locationPermissionFailure: () =>
           context.displayFlash(l10n.locationPermissionFailure),
+      remoteFailure: () => context.displayFlash(l10n.remoteFailure),
     );
   }
 }
