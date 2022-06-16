@@ -17,11 +17,12 @@ class CurrentWeatherInfo extends StatelessWidget {
       child: GridView.count(
         shrinkWrap: true,
         crossAxisCount: 2,
-        childAspectRatio: 4,
+        childAspectRatio: 5,
         mainAxisSpacing: 16.h,
+        padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Assets.icons.locationCurrent.svg(
@@ -37,7 +38,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Assets.icons.fluentWeatherRainShowersDay24Regular.svg(
@@ -53,7 +54,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Assets.icons.temperature.svg(
@@ -69,7 +70,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Assets.icons.ionWaterOutline.svg(
