@@ -11,5 +11,50 @@
   "splashGetApiUrl": "Getting weather API url...",
   "splashSaveApiKey": "Saving API key...",
   "splashSaveApiUrl": "Saving API url...",
-  "done": "Done"
+  "done": "Done",
+  "temperatureDegree": "{temperature}°",
+  "@temperatureDegree": {
+    "placeholders": {
+      "temperature": {
+        "format": "decimalPattern",
+        "example": "24",
+        "type": "double"
+      }
+    }
+  },
+  "percentage": "{percentage}",
+  "@percentage": {
+    "placeholders": {
+      "percentage": {
+        "format": "percentPattern",
+        "example": "80",
+        "type": "double"
+      }
+    }
+  },
+  "rain": "rain",
+  "chanceOfRain": "Chance of rain",
+  "wind": "wind",
+  "pressure": "pressure",
+  "mbar": "{pressure} mbar",
+  "@mbar": {
+    "placeholders": {
+      "pressure": {
+        "format": "decimalPattern",
+        "example": "80",
+        "type": "double"
+      }
+    }
+  },
+  "humidity": "humidity",
+  "kmh": "{speed} km/h",
+  "@kmh": {
+    "placeholders": {
+      "speed": {
+        "format": "decimalPattern",
+        "example": "80",
+        "type": "double"
+      }
+    }
+  }
 }

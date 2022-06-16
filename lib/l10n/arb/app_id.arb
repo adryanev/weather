@@ -11,5 +11,50 @@
   "splashGetApiUrl": "Mendapatkan weather API url...",
   "splashSaveApiKey": "Menyimpan API key...",
   "splashSaveApiUrl": "Menyimpan API url...",
-  "done": "Selesai"
+  "done": "Selesai",
+  "temperatureDegree": "{temperature}°",
+  "@temperatureDegree": {
+    "placeholders": {
+      "temperature": {
+        "format": "decimalPattern",
+        "example": "24",
+        "type": "double"
+      }
+    }
+  },
+  "percentage": "{percentage}",
+  "@percentage": {
+    "placeholders": {
+      "temperature": {
+        "format": "percentPattern",
+        "example": "80",
+        "type": "double"
+      }
+    }
+  },
+  "rain": "hujan",
+  "chanceOfRain": "kemungkinan hujan",
+  "wind": "angin",
+  "pressure": "tekanan",
+  "mbar": "mbar",
+  "@mbar": {
+    "placeholders": {
+      "pressure": {
+        "format": "decimalPattern",
+        "example": "80",
+        "type": "double"
+      }
+    }
+  },
+  "humidity": "kelembapan",
+  "kmh": "{speed} km/j",
+  "@kmh": {
+    "placeholders": {
+      "speed": {
+        "format": "decimalPattern",
+        "example": "80",
+        "type": "double"
+      }
+    }
+  }
 }

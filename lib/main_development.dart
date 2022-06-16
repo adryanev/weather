@@ -8,7 +8,12 @@
 import 'package:weather/app/app.dart';
 import 'package:weather/bootstrap.dart';
 import 'package:weather/core/utils/constants.dart';
+import 'package:weather/firebase_options_dev.dart';
 
 void main() {
-  bootstrap(() => const App(), environment: Environment.envDev);
+  bootstrap(
+    () => const App(),
+    environment: Environment.envDev,
+    firebaseOptions: DefaultFirebaseOptions.currentPlatform,
+  );
 }

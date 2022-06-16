@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:weather/app/routes/router.dart';
 import 'package:weather/core/presentation/mixins/error_message_handler.dart';
 import 'package:weather/core/utils/colors.dart';
+import 'package:weather/core/utils/context_extensions.dart';
 import 'package:weather/features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:weather/features/splash/presentation/widgets/status_text.dart';
 import 'package:weather/injector.dart';
@@ -41,6 +44,7 @@ class SplashPage extends StatelessWidget with ErrorMessageHandler {
           );
           if (state.status == SplashStatus.done) {
             //move to next page
+            context.goNamed(AppRouter.weather);
           }
         },
         child: Scaffold(
@@ -54,7 +58,9 @@ class SplashPage extends StatelessWidget with ErrorMessageHandler {
                 Center(
                   child: Text(
                     l10n.appName,
-                    style: Theme.of(context).textTheme.displayLarge,
+                    style: context.theme.textTheme.displayMedium?.copyWith(
+                      color: AppColor.white,
+                    ),
                   ),
                 ),
                 SizedBox(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather/core/utils/context_extensions.dart';
 import 'package:weather/features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:weather/l10n/l10n.dart';
 
@@ -38,7 +39,7 @@ class _TextStatus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       status,
-      style: Theme.of(context).textTheme.titleMedium,
+      style: context.theme.textTheme.titleMedium,
     );
   }
 }
