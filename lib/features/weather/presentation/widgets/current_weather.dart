@@ -23,7 +23,7 @@ class CurrentWeather extends StatelessWidget {
           child: Assets.icons.fluentWeatherMoon24Regular.svg(
             color: AppColor.white,
             width: 0.2.sw,
-            height: 0.15.sh,
+            height: 0.12.sh,
             fit: BoxFit.cover,
           ),
         ),

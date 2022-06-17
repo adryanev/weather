@@ -23,7 +23,7 @@ class _WeatherApiClient implements WeatherApiClient {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ResponseWeather>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'service/timeline/${query}',
+                .compose(_dio.options, 'services/timeline/${query}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ResponseWeather.fromJson(_result.data!);

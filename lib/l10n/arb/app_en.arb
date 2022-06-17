@@ -11,6 +11,8 @@
   "splashGetApiUrl": "Getting weather API url...",
   "splashSaveApiKey": "Saving API key...",
   "splashSaveApiUrl": "Saving API url...",
+  "splashGetGeocoderKey": "Getting Geocoder key...",
+  "splashSaveGeocoderKey": "Saving Geocoder key...",
   "done": "Done",
   "temperatureDegree": "{temperature}°",
   "@temperatureDegree": {
@@ -56,5 +58,6 @@
         "type": "double"
       }
     }
-  }
+  },
+  "loading": "loading..."
 }

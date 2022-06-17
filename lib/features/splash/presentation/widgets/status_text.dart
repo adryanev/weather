@@ -26,6 +26,10 @@ class StatusText extends StatelessWidget {
             return _TextStatus(status: l10n.splashInitializing);
           case SplashStatus.done:
             return _TextStatus(status: l10n.done);
+          case SplashStatus.fetchGeocoderKey:
+            return _TextStatus(status: l10n.splashGetGeocoderKey);
+          case SplashStatus.saveGeocoderKey:
+            return _TextStatus(status: l10n.splashSaveGeocoderKey);
         }
       },
     );

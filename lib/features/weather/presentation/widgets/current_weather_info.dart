@@ -17,9 +17,9 @@ class CurrentWeatherInfo extends StatelessWidget {
       child: GridView.count(
         shrinkWrap: true,
         crossAxisCount: 2,
-        childAspectRatio: 5,
+        childAspectRatio: 3,
         mainAxisSpacing: 16.h,
-        padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
+        // padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

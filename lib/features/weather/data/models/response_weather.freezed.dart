@@ -27,7 +27,7 @@ class _$ResponseWeatherTearOff {
       required String resolvedAddress,
       required String address,
       required String timezone,
-      required int timezoneOffset,
+      required int? timezoneOffset,
       required String description,
       List<ResponseWeatherData>? days,
       ResponseWeatherData? currentConditions}) {
@@ -59,7 +59,7 @@ mixin _$ResponseWeather {
   String get resolvedAddress => throw _privateConstructorUsedError;
   String get address => throw _privateConstructorUsedError;
   String get timezone => throw _privateConstructorUsedError;
-  int get timezoneOffset => throw _privateConstructorUsedError;
+  int? get timezoneOffset => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   List<ResponseWeatherData>? get days => throw _privateConstructorUsedError;
   ResponseWeatherData? get currentConditions =>
@@ -82,7 +82,7 @@ abstract class $ResponseWeatherCopyWith<$Res> {
       String resolvedAddress,
       String address,
       String timezone,
-      int timezoneOffset,
+      int? timezoneOffset,
       String description,
       List<ResponseWeatherData>? days,
       ResponseWeatherData? currentConditions});
@@ -135,7 +135,7 @@ class _$ResponseWeatherCopyWithImpl<$Res>
       timezoneOffset: timezoneOffset == freezed
           ? _value.timezoneOffset
           : timezoneOffset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -177,7 +177,7 @@ abstract class _$ResponseWeatherCopyWith<$Res>
       String resolvedAddress,
       String address,
       String timezone,
-      int timezoneOffset,
+      int? timezoneOffset,
       String description,
       List<ResponseWeatherData>? days,
       ResponseWeatherData? currentConditions});
@@ -233,7 +233,7 @@ class __$ResponseWeatherCopyWithImpl<$Res>
       timezoneOffset: timezoneOffset == freezed
           ? _value.timezoneOffset
           : timezoneOffset // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -278,7 +278,7 @@ class _$_ResponseWeather implements _ResponseWeather {
   @override
   final String timezone;
   @override
-  final int timezoneOffset;
+  final int? timezoneOffset;
   @override
   final String description;
   @override
@@ -342,7 +342,7 @@ abstract class _ResponseWeather implements ResponseWeather {
       required String resolvedAddress,
       required String address,
       required String timezone,
-      required int timezoneOffset,
+      required int? timezoneOffset,
       required String description,
       List<ResponseWeatherData>? days,
       ResponseWeatherData? currentConditions}) = _$_ResponseWeather;
@@ -361,7 +361,7 @@ abstract class _ResponseWeather implements ResponseWeather {
   @override
   String get timezone;
   @override
-  int get timezoneOffset;
+  int? get timezoneOffset;
   @override
   String get description;
   @override
@@ -402,10 +402,10 @@ class _$ResponseWeatherDataTearOff {
       @JsonKey(name: 'cloudcover') required double cloudCover,
       @JsonKey(name: 'solarradiation') required double solarRadiation,
       @JsonKey(name: 'solarenergy') required double? solarEnergy,
-      @JsonKey(name: 'uvindex') required int uvIndex,
-      @JsonKey(name: 'severerisk') required int severeRisk,
-      required String condition,
-      required String icon,
+      @JsonKey(name: 'uvindex') required double uvIndex,
+      @JsonKey(name: 'severerisk') required double severeRisk,
+      required String? condition,
+      required String? icon,
       required List<String>? stations,
       required String source,
       List<ResponseWeatherData>? hours}) {
@@ -480,11 +480,11 @@ mixin _$ResponseWeatherData {
   @JsonKey(name: 'solarenergy')
   double? get solarEnergy => throw _privateConstructorUsedError;
   @JsonKey(name: 'uvindex')
-  int get uvIndex => throw _privateConstructorUsedError;
+  double get uvIndex => throw _privateConstructorUsedError;
   @JsonKey(name: 'severerisk')
-  int get severeRisk => throw _privateConstructorUsedError;
-  String get condition => throw _privateConstructorUsedError;
-  String get icon => throw _privateConstructorUsedError;
+  double get severeRisk => throw _privateConstructorUsedError;
+  String? get condition => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
   List<String>? get stations => throw _privateConstructorUsedError;
   String get source => throw _privateConstructorUsedError;
   List<ResponseWeatherData>? get hours => throw _privateConstructorUsedError;
@@ -520,10 +520,10 @@ abstract class $ResponseWeatherDataCopyWith<$Res> {
       @JsonKey(name: 'cloudcover') double cloudCover,
       @JsonKey(name: 'solarradiation') double solarRadiation,
       @JsonKey(name: 'solarenergy') double? solarEnergy,
-      @JsonKey(name: 'uvindex') int uvIndex,
-      @JsonKey(name: 'severerisk') int severeRisk,
-      String condition,
-      String icon,
+      @JsonKey(name: 'uvindex') double uvIndex,
+      @JsonKey(name: 'severerisk') double severeRisk,
+      String? condition,
+      String? icon,
       List<String>? stations,
       String source,
       List<ResponseWeatherData>? hours});
@@ -647,19 +647,19 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
       uvIndex: uvIndex == freezed
           ? _value.uvIndex
           : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       severeRisk: severeRisk == freezed
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       condition: condition == freezed
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       stations: stations == freezed
           ? _value.stations
           : stations // ignore: cast_nullable_to_non_nullable
@@ -703,10 +703,10 @@ abstract class _$ResponseWeatherDataCopyWith<$Res>
       @JsonKey(name: 'cloudcover') double cloudCover,
       @JsonKey(name: 'solarradiation') double solarRadiation,
       @JsonKey(name: 'solarenergy') double? solarEnergy,
-      @JsonKey(name: 'uvindex') int uvIndex,
-      @JsonKey(name: 'severerisk') int severeRisk,
-      String condition,
-      String icon,
+      @JsonKey(name: 'uvindex') double uvIndex,
+      @JsonKey(name: 'severerisk') double severeRisk,
+      String? condition,
+      String? icon,
       List<String>? stations,
       String source,
       List<ResponseWeatherData>? hours});
@@ -832,19 +832,19 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
       uvIndex: uvIndex == freezed
           ? _value.uvIndex
           : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       severeRisk: severeRisk == freezed
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       condition: condition == freezed
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       stations: stations == freezed
           ? _value.stations
           : stations // ignore: cast_nullable_to_non_nullable
@@ -946,14 +946,14 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
   final double? solarEnergy;
   @override
   @JsonKey(name: 'uvindex')
-  final int uvIndex;
+  final double uvIndex;
   @override
   @JsonKey(name: 'severerisk')
-  final int severeRisk;
+  final double severeRisk;
   @override
-  final String condition;
+  final String? condition;
   @override
-  final String icon;
+  final String? icon;
   @override
   final List<String>? stations;
   @override
@@ -1074,10 +1074,10 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
       @JsonKey(name: 'cloudcover') required double cloudCover,
       @JsonKey(name: 'solarradiation') required double solarRadiation,
       @JsonKey(name: 'solarenergy') required double? solarEnergy,
-      @JsonKey(name: 'uvindex') required int uvIndex,
-      @JsonKey(name: 'severerisk') required int severeRisk,
-      required String condition,
-      required String icon,
+      @JsonKey(name: 'uvindex') required double uvIndex,
+      @JsonKey(name: 'severerisk') required double severeRisk,
+      required String? condition,
+      required String? icon,
       required List<String>? stations,
       required String source,
       List<ResponseWeatherData>? hours}) = _$_ResponseWeatherData;
@@ -1136,14 +1136,14 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
   double? get solarEnergy;
   @override
   @JsonKey(name: 'uvindex')
-  int get uvIndex;
+  double get uvIndex;
   @override
   @JsonKey(name: 'severerisk')
-  int get severeRisk;
+  double get severeRisk;
   @override
-  String get condition;
+  String? get condition;
   @override
-  String get icon;
+  String? get icon;
   @override
   List<String>? get stations;
   @override

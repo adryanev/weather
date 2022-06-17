@@ -12,7 +12,7 @@ abstract class WeatherApiClient {
   @factoryMethod
   factory WeatherApiClient(Dio dio) = _WeatherApiClient;
 
-  @GET('service/timeline/{query}')
+  @GET('services/timeline/{query}')
   Future<ResponseWeather> getWeather(
     @Path('query') String query, [
     UnitGroup unitGroup = UnitGroup.metric,

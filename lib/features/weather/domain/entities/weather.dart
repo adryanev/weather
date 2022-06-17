@@ -22,12 +22,12 @@ class Weather with _$Weather {
     required double cloudCover,
     required double solarRadiation,
     required double? solarEnergy,
-    required int uvIndex,
-    required int severeRisk,
-    required String condition,
-    required String icon,
+    required double uvIndex,
+    required double severeRisk,
+    required String? condition,
+    required String? icon,
     required List<String>? stations,
-    required String source,
+    required String? source,
     List<Weather>? hours,
   }) = _Weather;
 }

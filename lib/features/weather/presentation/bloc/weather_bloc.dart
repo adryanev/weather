@@ -35,10 +35,17 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
     final weather = await _getWeatherByCoordinates(
       WeatherByCoordinatesParams(location: event.location),
     );
+    if (weather.isRight()) {
+      emit(
+        state.copyWith(
+          currentWeather: weather.toOption().toNullable()?.firstOrNull,
+        ),
+      );
+    }
     emit(
       state.copyWith(weatherListOrFailureOption: optionOf(weather)),
     );
-    emit(state.copyWith(weatherListOrFailureOption: none()));
+    emit(state.copyWith(weatherListOrFailureOption: none(), isLoading: false));
   }
 
   FutureOr<void> _onGetLocation(
@@ -47,9 +54,18 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   ) async {
     emit(state.copyWith(isLoading: true));
     final location = await _getCurrentLocation(NoParams());
+    if (location.isRight()) {
+      emit(
+        state.copyWith(location: location.toOption().toNullable()),
+      );
+    }
     emit(
       state.copyWith(locationOrFailureOption: optionOf(location)),
     );
-    emit(state.copyWith(locationOrFailureOption: none()));
+    emit(
+      state.copyWith(
+        locationOrFailureOption: none(),
+      ),
+    );
   }
 }

@@ -24,7 +24,9 @@ class WeatherRemoteSourceImpl implements WeatherRemoteSource {
     double longitude,
   ) async {
     try {
-      final data = await _client.getWeather('$latitude, $longitude');
+      final data = await _client.getWeather(
+        Uri.encodeComponent('$latitude, $longitude'),
+      );
       return right(data);
     } catch (c) {
       log(c.toString());

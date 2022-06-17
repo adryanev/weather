@@ -18,10 +18,12 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {required double latitude,
+      {required String name,
+      required double latitude,
       required double longitude,
       required DateTime fetchOn}) {
     return _Location(
+      name: name,
       latitude: latitude,
       longitude: longitude,
       fetchOn: fetchOn,
@@ -34,6 +36,7 @@ const $Location = _$LocationTearOff();
 
 /// @nodoc
 mixin _$Location {
+  String get name => throw _privateConstructorUsedError;
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
   DateTime get fetchOn => throw _privateConstructorUsedError;
@@ -47,7 +50,7 @@ mixin _$Location {
 abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
-  $Res call({double latitude, double longitude, DateTime fetchOn});
+  $Res call({String name, double latitude, double longitude, DateTime fetchOn});
 }
 
 /// @nodoc
@@ -60,11 +63,16 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? name = freezed,
     Object? latitude = freezed,
     Object? longitude = freezed,
     Object? fetchOn = freezed,
   }) {
     return _then(_value.copyWith(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
@@ -86,7 +94,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   factory _$LocationCopyWith(_Location value, $Res Function(_Location) then) =
       __$LocationCopyWithImpl<$Res>;
   @override
-  $Res call({double latitude, double longitude, DateTime fetchOn});
+  $Res call({String name, double latitude, double longitude, DateTime fetchOn});
 }
 
 /// @nodoc
@@ -100,11 +108,16 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? name = freezed,
     Object? latitude = freezed,
     Object? longitude = freezed,
     Object? fetchOn = freezed,
   }) {
     return _then(_Location(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
@@ -125,8 +138,13 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 
 class _$_Location implements _Location {
   const _$_Location(
-      {required this.latitude, required this.longitude, required this.fetchOn});
+      {required this.name,
+      required this.latitude,
+      required this.longitude,
+      required this.fetchOn});
 
+  @override
+  final String name;
   @override
   final double latitude;
   @override
@@ -136,7 +154,7 @@ class _$_Location implements _Location {
 
   @override
   String toString() {
-    return 'Location(latitude: $latitude, longitude: $longitude, fetchOn: $fetchOn)';
+    return 'Location(name: $name, latitude: $latitude, longitude: $longitude, fetchOn: $fetchOn)';
   }
 
   @override
@@ -144,6 +162,7 @@ class _$_Location implements _Location {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Location &&
+            const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.latitude, latitude) &&
             const DeepCollectionEquality().equals(other.longitude, longitude) &&
             const DeepCollectionEquality().equals(other.fetchOn, fetchOn));
@@ -152,6 +171,7 @@ class _$_Location implements _Location {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(latitude),
       const DeepCollectionEquality().hash(longitude),
       const DeepCollectionEquality().hash(fetchOn));
@@ -164,10 +184,13 @@ class _$_Location implements _Location {
 
 abstract class _Location implements Location {
   const factory _Location(
-      {required double latitude,
+      {required String name,
+      required double latitude,
       required double longitude,
       required DateTime fetchOn}) = _$_Location;
 
+  @override
+  String get name;
   @override
   double get latitude;
   @override

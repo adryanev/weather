@@ -10,6 +10,7 @@ class Environment {
 class KeyConstants {
   static const remoteConfigApiKey = 'api_key';
   static const remoteConfigApiUrl = 'api_url';
+  static const remoteConfigMapsKey = 'google_maps_api_key';
 }
 
 class ScreenUtilConstants {

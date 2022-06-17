@@ -483,11 +483,15 @@ class _$WeatherStateTearOff {
       {required bool isLoading,
       required Option<Either<Failure, Location>> locationOrFailureOption,
       required Option<Either<Failure, List<Weather>>>
-          weatherListOrFailureOption}) {
+          weatherListOrFailureOption,
+      required Weather? currentWeather,
+      required Location? location}) {
     return _WeatherState(
       isLoading: isLoading,
       locationOrFailureOption: locationOrFailureOption,
       weatherListOrFailureOption: weatherListOrFailureOption,
+      currentWeather: currentWeather,
+      location: location,
     );
   }
 }
@@ -502,6 +506,8 @@ mixin _$WeatherState {
       throw _privateConstructorUsedError;
   Option<Either<Failure, List<Weather>>> get weatherListOrFailureOption =>
       throw _privateConstructorUsedError;
+  Weather? get currentWeather => throw _privateConstructorUsedError;
+  Location? get location => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WeatherStateCopyWith<WeatherState> get copyWith =>
@@ -516,7 +522,12 @@ abstract class $WeatherStateCopyWith<$Res> {
   $Res call(
       {bool isLoading,
       Option<Either<Failure, Location>> locationOrFailureOption,
-      Option<Either<Failure, List<Weather>>> weatherListOrFailureOption});
+      Option<Either<Failure, List<Weather>>> weatherListOrFailureOption,
+      Weather? currentWeather,
+      Location? location});
+
+  $WeatherCopyWith<$Res>? get currentWeather;
+  $LocationCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -532,6 +543,8 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
     Object? isLoading = freezed,
     Object? locationOrFailureOption = freezed,
     Object? weatherListOrFailureOption = freezed,
+    Object? currentWeather = freezed,
+    Object? location = freezed,
   }) {
     return _then(_value.copyWith(
       isLoading: isLoading == freezed
@@ -546,7 +559,37 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
           ? _value.weatherListOrFailureOption
           : weatherListOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, List<Weather>>>,
+      currentWeather: currentWeather == freezed
+          ? _value.currentWeather
+          : currentWeather // ignore: cast_nullable_to_non_nullable
+              as Weather?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Location?,
     ));
+  }
+
+  @override
+  $WeatherCopyWith<$Res>? get currentWeather {
+    if (_value.currentWeather == null) {
+      return null;
+    }
+
+    return $WeatherCopyWith<$Res>(_value.currentWeather!, (value) {
+      return _then(_value.copyWith(currentWeather: value));
+    });
+  }
+
+  @override
+  $LocationCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $LocationCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
+    });
   }
 }
 
@@ -560,7 +603,14 @@ abstract class _$WeatherStateCopyWith<$Res>
   $Res call(
       {bool isLoading,
       Option<Either<Failure, Location>> locationOrFailureOption,
-      Option<Either<Failure, List<Weather>>> weatherListOrFailureOption});
+      Option<Either<Failure, List<Weather>>> weatherListOrFailureOption,
+      Weather? currentWeather,
+      Location? location});
+
+  @override
+  $WeatherCopyWith<$Res>? get currentWeather;
+  @override
+  $LocationCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -578,6 +628,8 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? locationOrFailureOption = freezed,
     Object? weatherListOrFailureOption = freezed,
+    Object? currentWeather = freezed,
+    Object? location = freezed,
   }) {
     return _then(_WeatherState(
       isLoading: isLoading == freezed
@@ -592,6 +644,14 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
           ? _value.weatherListOrFailureOption
           : weatherListOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, List<Weather>>>,
+      currentWeather: currentWeather == freezed
+          ? _value.currentWeather
+          : currentWeather // ignore: cast_nullable_to_non_nullable
+              as Weather?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Location?,
     ));
   }
 }
@@ -602,7 +662,9 @@ class _$_WeatherState implements _WeatherState {
   const _$_WeatherState(
       {required this.isLoading,
       required this.locationOrFailureOption,
-      required this.weatherListOrFailureOption});
+      required this.weatherListOrFailureOption,
+      required this.currentWeather,
+      required this.location});
 
   @override
   final bool isLoading;
@@ -610,10 +672,14 @@ class _$_WeatherState implements _WeatherState {
   final Option<Either<Failure, Location>> locationOrFailureOption;
   @override
   final Option<Either<Failure, List<Weather>>> weatherListOrFailureOption;
+  @override
+  final Weather? currentWeather;
+  @override
+  final Location? location;
 
   @override
   String toString() {
-    return 'WeatherState(isLoading: $isLoading, locationOrFailureOption: $locationOrFailureOption, weatherListOrFailureOption: $weatherListOrFailureOption)';
+    return 'WeatherState(isLoading: $isLoading, locationOrFailureOption: $locationOrFailureOption, weatherListOrFailureOption: $weatherListOrFailureOption, currentWeather: $currentWeather, location: $location)';
   }
 
   @override
@@ -625,7 +691,10 @@ class _$_WeatherState implements _WeatherState {
             const DeepCollectionEquality().equals(
                 other.locationOrFailureOption, locationOrFailureOption) &&
             const DeepCollectionEquality().equals(
-                other.weatherListOrFailureOption, weatherListOrFailureOption));
+                other.weatherListOrFailureOption, weatherListOrFailureOption) &&
+            const DeepCollectionEquality()
+                .equals(other.currentWeather, currentWeather) &&
+            const DeepCollectionEquality().equals(other.location, location));
   }
 
   @override
@@ -633,7 +702,9 @@ class _$_WeatherState implements _WeatherState {
       runtimeType,
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(locationOrFailureOption),
-      const DeepCollectionEquality().hash(weatherListOrFailureOption));
+      const DeepCollectionEquality().hash(weatherListOrFailureOption),
+      const DeepCollectionEquality().hash(currentWeather),
+      const DeepCollectionEquality().hash(location));
 
   @JsonKey(ignore: true)
   @override
@@ -646,7 +717,9 @@ abstract class _WeatherState implements WeatherState {
       {required bool isLoading,
       required Option<Either<Failure, Location>> locationOrFailureOption,
       required Option<Either<Failure, List<Weather>>>
-          weatherListOrFailureOption}) = _$_WeatherState;
+          weatherListOrFailureOption,
+      required Weather? currentWeather,
+      required Location? location}) = _$_WeatherState;
 
   @override
   bool get isLoading;
@@ -654,6 +727,10 @@ abstract class _WeatherState implements WeatherState {
   Option<Either<Failure, Location>> get locationOrFailureOption;
   @override
   Option<Either<Failure, List<Weather>>> get weatherListOrFailureOption;
+  @override
+  Weather? get currentWeather;
+  @override
+  Location? get location;
   @override
   @JsonKey(ignore: true)
   _$WeatherStateCopyWith<_WeatherState> get copyWith =>

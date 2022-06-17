@@ -46,4 +46,21 @@ class RemoteConfigRepositoryImpl implements RemoteConfigRepository {
   Future<Either<Failure, Unit>> saveApiUrl(RemoteConfig remoteConfig) {
     return _localConfigDataSource.saveApiUrl(remoteConfig.value.toString());
   }
+
+  @override
+  Future<Either<Failure, RemoteConfig<String, String>>> getGeocoderKey() async {
+    final data = await _dataSource.getMapApiKey();
+    return data.map(
+      (r) => RemoteConfig(
+        key: KeyConstants.remoteConfigMapsKey,
+        value: r,
+      ),
+    );
+  }
+
+  @override
+  Future<Either<Failure, Unit>> saveGeocoderKey(RemoteConfig remoteConfig) {
+    return _localConfigDataSource
+        .saveGeocoderKey(remoteConfig.value.toString());
+  }
 }

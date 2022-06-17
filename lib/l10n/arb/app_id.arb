@@ -11,6 +11,8 @@
   "splashGetApiUrl": "Mendapatkan weather API url...",
   "splashSaveApiKey": "Menyimpan API key...",
   "splashSaveApiUrl": "Menyimpan API url...",
+  "splashGetGeocoderKey": "Mendapatkan Geocoder key...",
+  "splashSaveGeocoderKey": "Menyimpan Geocoder key...",
   "done": "Selesai",
   "temperatureDegree": "{temperature}°",
   "@temperatureDegree": {
@@ -56,5 +58,6 @@
         "type": "double"
       }
     }
-  }
+  },
+  "loading": "memuat..."
 }
