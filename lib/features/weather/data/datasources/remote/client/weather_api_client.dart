@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/http.dart';
-import 'package:weather/core/domain/unit_group.dart';
 import 'package:weather/features/weather/data/models/response_weather.dart';
 
 part 'weather_api_client.g.dart';
@@ -15,7 +14,7 @@ abstract class WeatherApiClient {
   @GET('services/timeline/{query}')
   Future<ResponseWeather> getWeather(
     @Path('query') String query, [
-    UnitGroup unitGroup = UnitGroup.metric,
+    @Query('unitGroup') String unitGroup = 'metric',
     @Query('contentType') String contentType = 'json',
   ]);
 }

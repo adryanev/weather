@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:recase/recase.dart';
 import 'package:weather/core/utils/colors.dart';
+import 'package:weather/features/weather/domain/entities/weather.dart';
 import 'package:weather/gen/assets.gen.dart';
 import 'package:weather/l10n/l10n.dart';
 
 class CurrentWeatherInfo extends StatelessWidget {
   const CurrentWeatherInfo({
+    required this.weather,
     Key? key,
   }) : super(key: key);
-
+  final Weather? weather;
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
@@ -31,7 +33,7 @@ class CurrentWeatherInfo extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.kmh(3.7)),
+                  Text(l10n.kmh(weather?.windSpeed ?? 0)),
                   Text(l10n.wind.titleCase),
                 ],
               )
@@ -47,7 +49,11 @@ class CurrentWeatherInfo extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.percentage(0.7)),
+                  Text(
+                    l10n.percentage(
+                      (weather?.precipitationProbability ?? 0) / 100,
+                    ),
+                  ),
                   Text(l10n.chanceOfRain.titleCase),
                 ],
               )
@@ -63,7 +69,7 @@ class CurrentWeatherInfo extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.mbar(108)),
+                  Text(l10n.mbar(weather?.pressure ?? 0)),
                   Text(l10n.pressure.titleCase),
                 ],
               )
@@ -79,7 +85,7 @@ class CurrentWeatherInfo extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(l10n.percentage(0.3)),
+                  Text(l10n.percentage((weather?.humidity ?? 0) * 0.01)),
                   Text(l10n.humidity.titleCase),
                 ],
               )

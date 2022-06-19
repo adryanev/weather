@@ -48,7 +48,6 @@ class SplashCubit extends Cubit<SplashState> {
         fetchApiKeyOrFailureOption: optionOf(result),
       ),
     );
-    await Future<void>.delayed(const Duration(milliseconds: 500));
     emit(
       state.copyWith(
         isLoading: false,
@@ -71,7 +70,6 @@ class SplashCubit extends Cubit<SplashState> {
         fetchApiUrlOrFailureOption: optionOf(result),
       ),
     );
-    await Future<void>.delayed(const Duration(milliseconds: 500));
 
     emit(
       state.copyWith(
@@ -92,7 +90,6 @@ class SplashCubit extends Cubit<SplashState> {
         fetchGeocoderKeyOrFailureOption: optionOf(result),
       ),
     );
-    await Future<void>.delayed(const Duration(milliseconds: 500));
 
     emit(
       state.copyWith(
@@ -113,7 +110,6 @@ class SplashCubit extends Cubit<SplashState> {
       RemoteConfigParams(remoteConfig: remoteConfig),
     );
     emit(state.copyWith(saveApiKeyOrFailureOption: optionOf(result)));
-    await Future<void>.delayed(const Duration(milliseconds: 500));
 
     emit(
       state.copyWith(

@@ -80,19 +80,28 @@ class JumbotronCard extends StatelessWidget {
       ),
       child: Padding(
         padding: Dimension.aroundPadding,
-        child: Column(
-          children: [
-            const HomeAppBar(),
-            const CurrentWeather(),
-            Padding(
-              padding: Dimension.aroundPadding,
-              child: Divider(
-                height: 8.h,
-                color: AppColor.white,
-              ),
-            ),
-            const CurrentWeatherInfo()
-          ],
+        child: BlocBuilder<WeatherBloc, WeatherState>(
+          builder: (context, state) {
+            if (state.isLoading) {
+              return const Center(child: CircularProgressIndicator.adaptive());
+            }
+            return Column(
+              children: [
+                const HomeAppBar(),
+                CurrentWeather(weather: state.currentWeather),
+                Padding(
+                  padding: Dimension.aroundPadding,
+                  child: Divider(
+                    height: 8.h,
+                    color: AppColor.white,
+                  ),
+                ),
+                CurrentWeatherInfo(
+                  weather: state.currentWeather,
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
@@ -122,15 +131,29 @@ class WeatherPerHourCard extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
             ),
-            Expanded(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: 6,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return const HourlyWeather();
-                },
-              ),
+            BlocBuilder<WeatherBloc, WeatherState>(
+              builder: (context, state) {
+                if (state.isLoading) {
+                  return const Center(
+                    child: CircularProgressIndicator.adaptive(),
+                  );
+                }
+                final currentWeather = state.currentWeather?.hours
+                    ?.where((element) => element.dateTime.hour >= now.hour)
+                    .toList();
+                return Expanded(
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: currentWeather?.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return HourlyWeather(
+                        weather: currentWeather?[index],
+                      );
+                    },
+                  ),
+                );
+              },
             )
           ],
         ),

@@ -63,7 +63,7 @@ _$_ResponseWeatherData _$$_ResponseWeatherDataFromJson(
       solarEnergy: (json['solarenergy'] as num?)?.toDouble(),
       uvIndex: (json['uvindex'] as num).toDouble(),
       severeRisk: (json['severerisk'] as num).toDouble(),
-      condition: json['condition'] as String?,
+      conditions: json['conditions'] as String?,
       icon: json['icon'] as String?,
       stations: (json['stations'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -98,7 +98,7 @@ Map<String, dynamic> _$$_ResponseWeatherDataToJson(
       'solarenergy': instance.solarEnergy,
       'uvindex': instance.uvIndex,
       'severerisk': instance.severeRisk,
-      'condition': instance.condition,
+      'conditions': instance.conditions,
       'icon': instance.icon,
       'stations': instance.stations,
       'source': instance.source,

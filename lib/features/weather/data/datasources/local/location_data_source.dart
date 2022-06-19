@@ -87,7 +87,9 @@ Location permissions are permanently denied, we cannot request permissions.
       final geocoder = GoogleGeocoding(apiKey!);
       final data = await geocoder.geocoding
           .getReverse(LatLon(position.latitude, position.longitude));
-      return right(data?.results?.firstOrNull?.addressComponents?.toString());
+      return right(
+        data?.results?.firstOrNull?.formattedAddress,
+      );
     } catch (e, stack) {
       log(e.toString(), stackTrace: stack);
       return left(const Failure.locationFailure());

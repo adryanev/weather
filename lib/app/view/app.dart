@@ -57,6 +57,9 @@ class App extends StatelessWidget {
                 fontSizeFactor: 1.sp,
                 bodyColor: AppColor.white,
               ),
+              progressIndicatorTheme: const ProgressIndicatorThemeData(
+                color: AppColor.white,
+              ),
             ),
             localizationsDelegates: const [
               AppLocalizations.delegate,

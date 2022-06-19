@@ -30,7 +30,11 @@
       "percentage": {
         "format": "percentPattern",
         "example": "80",
-        "type": "double"
+        "type": "double",
+        "optionalParameters": {
+          "decimalDigits": 2,
+          "customPattern": "#0.00"
+        }
       }
     }
   },
@@ -44,7 +48,11 @@
       "pressure": {
         "format": "decimalPattern",
         "example": "80",
-        "type": "double"
+        "type": "double",
+        "optionalParameters": {
+          "decimalDigits": 2,
+          "customPattern": "#0.0"
+        }
       }
     }
   },
@@ -55,7 +63,11 @@
       "speed": {
         "format": "decimalPattern",
         "example": "80",
-        "type": "double"
+        "type": "double",
+        "optionalParameters": {
+          "decimalDigits": 2,
+          "customPattern": "#0.0"
+        }
       }
     }
   },

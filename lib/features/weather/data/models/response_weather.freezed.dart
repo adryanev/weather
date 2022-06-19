@@ -404,7 +404,7 @@ class _$ResponseWeatherDataTearOff {
       @JsonKey(name: 'solarenergy') required double? solarEnergy,
       @JsonKey(name: 'uvindex') required double uvIndex,
       @JsonKey(name: 'severerisk') required double severeRisk,
-      required String? condition,
+      required String? conditions,
       required String? icon,
       required List<String>? stations,
       required String source,
@@ -431,7 +431,7 @@ class _$ResponseWeatherDataTearOff {
       solarEnergy: solarEnergy,
       uvIndex: uvIndex,
       severeRisk: severeRisk,
-      condition: condition,
+      conditions: conditions,
       icon: icon,
       stations: stations,
       source: source,
@@ -483,7 +483,7 @@ mixin _$ResponseWeatherData {
   double get uvIndex => throw _privateConstructorUsedError;
   @JsonKey(name: 'severerisk')
   double get severeRisk => throw _privateConstructorUsedError;
-  String? get condition => throw _privateConstructorUsedError;
+  String? get conditions => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   List<String>? get stations => throw _privateConstructorUsedError;
   String get source => throw _privateConstructorUsedError;
@@ -522,7 +522,7 @@ abstract class $ResponseWeatherDataCopyWith<$Res> {
       @JsonKey(name: 'solarenergy') double? solarEnergy,
       @JsonKey(name: 'uvindex') double uvIndex,
       @JsonKey(name: 'severerisk') double severeRisk,
-      String? condition,
+      String? conditions,
       String? icon,
       List<String>? stations,
       String source,
@@ -561,7 +561,7 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
     Object? solarEnergy = freezed,
     Object? uvIndex = freezed,
     Object? severeRisk = freezed,
-    Object? condition = freezed,
+    Object? conditions = freezed,
     Object? icon = freezed,
     Object? stations = freezed,
     Object? source = freezed,
@@ -652,9 +652,9 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
               as double,
-      condition: condition == freezed
-          ? _value.condition
-          : condition // ignore: cast_nullable_to_non_nullable
+      conditions: conditions == freezed
+          ? _value.conditions
+          : conditions // ignore: cast_nullable_to_non_nullable
               as String?,
       icon: icon == freezed
           ? _value.icon
@@ -705,7 +705,7 @@ abstract class _$ResponseWeatherDataCopyWith<$Res>
       @JsonKey(name: 'solarenergy') double? solarEnergy,
       @JsonKey(name: 'uvindex') double uvIndex,
       @JsonKey(name: 'severerisk') double severeRisk,
-      String? condition,
+      String? conditions,
       String? icon,
       List<String>? stations,
       String source,
@@ -746,7 +746,7 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
     Object? solarEnergy = freezed,
     Object? uvIndex = freezed,
     Object? severeRisk = freezed,
-    Object? condition = freezed,
+    Object? conditions = freezed,
     Object? icon = freezed,
     Object? stations = freezed,
     Object? source = freezed,
@@ -837,9 +837,9 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
               as double,
-      condition: condition == freezed
-          ? _value.condition
-          : condition // ignore: cast_nullable_to_non_nullable
+      conditions: conditions == freezed
+          ? _value.conditions
+          : conditions // ignore: cast_nullable_to_non_nullable
               as String?,
       icon: icon == freezed
           ? _value.icon
@@ -886,7 +886,7 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
       @JsonKey(name: 'solarenergy') required this.solarEnergy,
       @JsonKey(name: 'uvindex') required this.uvIndex,
       @JsonKey(name: 'severerisk') required this.severeRisk,
-      required this.condition,
+      required this.conditions,
       required this.icon,
       required this.stations,
       required this.source,
@@ -951,7 +951,7 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
   @JsonKey(name: 'severerisk')
   final double severeRisk;
   @override
-  final String? condition;
+  final String? conditions;
   @override
   final String? icon;
   @override
@@ -963,7 +963,7 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
 
   @override
   String toString() {
-    return 'ResponseWeatherData(datetime: $datetime, datetimeEpoch: $datetimeEpoch, temperature: $temperature, feelsLike: $feelsLike, humidity: $humidity, dew: $dew, precipitation: $precipitation, precipitationProbability: $precipitationProbability, snow: $snow, snowDepth: $snowDepth, precipitationTypes: $precipitationTypes, windGust: $windGust, windSpeed: $windSpeed, windDirection: $windDirection, pressure: $pressure, visibility: $visibility, cloudCover: $cloudCover, solarRadiation: $solarRadiation, solarEnergy: $solarEnergy, uvIndex: $uvIndex, severeRisk: $severeRisk, condition: $condition, icon: $icon, stations: $stations, source: $source, hours: $hours)';
+    return 'ResponseWeatherData(datetime: $datetime, datetimeEpoch: $datetimeEpoch, temperature: $temperature, feelsLike: $feelsLike, humidity: $humidity, dew: $dew, precipitation: $precipitation, precipitationProbability: $precipitationProbability, snow: $snow, snowDepth: $snowDepth, precipitationTypes: $precipitationTypes, windGust: $windGust, windSpeed: $windSpeed, windDirection: $windDirection, pressure: $pressure, visibility: $visibility, cloudCover: $cloudCover, solarRadiation: $solarRadiation, solarEnergy: $solarEnergy, uvIndex: $uvIndex, severeRisk: $severeRisk, conditions: $conditions, icon: $icon, stations: $stations, source: $source, hours: $hours)';
   }
 
   @override
@@ -1003,7 +1003,8 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
             const DeepCollectionEquality().equals(other.uvIndex, uvIndex) &&
             const DeepCollectionEquality()
                 .equals(other.severeRisk, severeRisk) &&
-            const DeepCollectionEquality().equals(other.condition, condition) &&
+            const DeepCollectionEquality()
+                .equals(other.conditions, conditions) &&
             const DeepCollectionEquality().equals(other.icon, icon) &&
             const DeepCollectionEquality().equals(other.stations, stations) &&
             const DeepCollectionEquality().equals(other.source, source) &&
@@ -1034,7 +1035,7 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
         const DeepCollectionEquality().hash(solarEnergy),
         const DeepCollectionEquality().hash(uvIndex),
         const DeepCollectionEquality().hash(severeRisk),
-        const DeepCollectionEquality().hash(condition),
+        const DeepCollectionEquality().hash(conditions),
         const DeepCollectionEquality().hash(icon),
         const DeepCollectionEquality().hash(stations),
         const DeepCollectionEquality().hash(source),
@@ -1076,7 +1077,7 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
       @JsonKey(name: 'solarenergy') required double? solarEnergy,
       @JsonKey(name: 'uvindex') required double uvIndex,
       @JsonKey(name: 'severerisk') required double severeRisk,
-      required String? condition,
+      required String? conditions,
       required String? icon,
       required List<String>? stations,
       required String source,
@@ -1141,7 +1142,7 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
   @JsonKey(name: 'severerisk')
   double get severeRisk;
   @override
-  String? get condition;
+  String? get conditions;
   @override
   String? get icon;
   @override
