@@ -70,8 +70,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '737271602056',
     projectId: 'flutter-weather-23117',
     storageBucket: 'flutter-weather-23117.appspot.com',
-    androidClientId: '737271602056-mr6l90inmoup53413o3nuebt1d8hmjtg.apps.googleusercontent.com',
-    iosClientId: '737271602056-1p3udjump55dlui21d5ug07hphuuji4v.apps.googleusercontent.com',
+    androidClientId:
+        '737271602056-mr6l90inmoup53413o3nuebt1d8hmjtg.apps.googleusercontent.com',
+    iosClientId:
+        '737271602056-1p3udjump55dlui21d5ug07hphuuji4v.apps.googleusercontent.com',
     iosBundleId: 'dev.adryanev.weather.dev',
   );
 }
