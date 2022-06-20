@@ -22,14 +22,19 @@ class _$SplashStateTearOff {
           fetchApiUrlOrFailureOption,
       required Option<Either<Failure, RemoteConfig<String, String>>>
           fetchApiKeyOrFailureOption,
+      required Option<Either<Failure, RemoteConfig<String, String>>>
+          fetchGeocoderKeyOrFailureOption,
       required Option<Either<Failure, Unit>> saveApiKeyOrFailureOption,
+      required Option<Either<Failure, Unit>> saveGeocoderKeyOrFailureOption,
       required Option<Either<Failure, Unit>> saveApiUrlOrFailureOption,
       required SplashStatus status,
       required bool isLoading}) {
     return _SplashState(
       fetchApiUrlOrFailureOption: fetchApiUrlOrFailureOption,
       fetchApiKeyOrFailureOption: fetchApiKeyOrFailureOption,
+      fetchGeocoderKeyOrFailureOption: fetchGeocoderKeyOrFailureOption,
       saveApiKeyOrFailureOption: saveApiKeyOrFailureOption,
+      saveGeocoderKeyOrFailureOption: saveGeocoderKeyOrFailureOption,
       saveApiUrlOrFailureOption: saveApiUrlOrFailureOption,
       status: status,
       isLoading: isLoading,
@@ -46,7 +51,11 @@ mixin _$SplashState {
       get fetchApiUrlOrFailureOption => throw _privateConstructorUsedError;
   Option<Either<Failure, RemoteConfig<String, String>>>
       get fetchApiKeyOrFailureOption => throw _privateConstructorUsedError;
+  Option<Either<Failure, RemoteConfig<String, String>>>
+      get fetchGeocoderKeyOrFailureOption => throw _privateConstructorUsedError;
   Option<Either<Failure, Unit>> get saveApiKeyOrFailureOption =>
+      throw _privateConstructorUsedError;
+  Option<Either<Failure, Unit>> get saveGeocoderKeyOrFailureOption =>
       throw _privateConstructorUsedError;
   Option<Either<Failure, Unit>> get saveApiUrlOrFailureOption =>
       throw _privateConstructorUsedError;
@@ -68,7 +77,10 @@ abstract class $SplashStateCopyWith<$Res> {
           fetchApiUrlOrFailureOption,
       Option<Either<Failure, RemoteConfig<String, String>>>
           fetchApiKeyOrFailureOption,
+      Option<Either<Failure, RemoteConfig<String, String>>>
+          fetchGeocoderKeyOrFailureOption,
       Option<Either<Failure, Unit>> saveApiKeyOrFailureOption,
+      Option<Either<Failure, Unit>> saveGeocoderKeyOrFailureOption,
       Option<Either<Failure, Unit>> saveApiUrlOrFailureOption,
       SplashStatus status,
       bool isLoading});
@@ -86,7 +98,9 @@ class _$SplashStateCopyWithImpl<$Res> implements $SplashStateCopyWith<$Res> {
   $Res call({
     Object? fetchApiUrlOrFailureOption = freezed,
     Object? fetchApiKeyOrFailureOption = freezed,
+    Object? fetchGeocoderKeyOrFailureOption = freezed,
     Object? saveApiKeyOrFailureOption = freezed,
+    Object? saveGeocoderKeyOrFailureOption = freezed,
     Object? saveApiUrlOrFailureOption = freezed,
     Object? status = freezed,
     Object? isLoading = freezed,
@@ -100,9 +114,18 @@ class _$SplashStateCopyWithImpl<$Res> implements $SplashStateCopyWith<$Res> {
           ? _value.fetchApiKeyOrFailureOption
           : fetchApiKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, RemoteConfig<String, String>>>,
+      fetchGeocoderKeyOrFailureOption: fetchGeocoderKeyOrFailureOption ==
+              freezed
+          ? _value.fetchGeocoderKeyOrFailureOption
+          : fetchGeocoderKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, RemoteConfig<String, String>>>,
       saveApiKeyOrFailureOption: saveApiKeyOrFailureOption == freezed
           ? _value.saveApiKeyOrFailureOption
           : saveApiKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, Unit>>,
+      saveGeocoderKeyOrFailureOption: saveGeocoderKeyOrFailureOption == freezed
+          ? _value.saveGeocoderKeyOrFailureOption
+          : saveGeocoderKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, Unit>>,
       saveApiUrlOrFailureOption: saveApiUrlOrFailureOption == freezed
           ? _value.saveApiUrlOrFailureOption
@@ -132,7 +155,10 @@ abstract class _$SplashStateCopyWith<$Res>
           fetchApiUrlOrFailureOption,
       Option<Either<Failure, RemoteConfig<String, String>>>
           fetchApiKeyOrFailureOption,
+      Option<Either<Failure, RemoteConfig<String, String>>>
+          fetchGeocoderKeyOrFailureOption,
       Option<Either<Failure, Unit>> saveApiKeyOrFailureOption,
+      Option<Either<Failure, Unit>> saveGeocoderKeyOrFailureOption,
       Option<Either<Failure, Unit>> saveApiUrlOrFailureOption,
       SplashStatus status,
       bool isLoading});
@@ -152,7 +178,9 @@ class __$SplashStateCopyWithImpl<$Res> extends _$SplashStateCopyWithImpl<$Res>
   $Res call({
     Object? fetchApiUrlOrFailureOption = freezed,
     Object? fetchApiKeyOrFailureOption = freezed,
+    Object? fetchGeocoderKeyOrFailureOption = freezed,
     Object? saveApiKeyOrFailureOption = freezed,
+    Object? saveGeocoderKeyOrFailureOption = freezed,
     Object? saveApiUrlOrFailureOption = freezed,
     Object? status = freezed,
     Object? isLoading = freezed,
@@ -166,9 +194,18 @@ class __$SplashStateCopyWithImpl<$Res> extends _$SplashStateCopyWithImpl<$Res>
           ? _value.fetchApiKeyOrFailureOption
           : fetchApiKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, RemoteConfig<String, String>>>,
+      fetchGeocoderKeyOrFailureOption: fetchGeocoderKeyOrFailureOption ==
+              freezed
+          ? _value.fetchGeocoderKeyOrFailureOption
+          : fetchGeocoderKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, RemoteConfig<String, String>>>,
       saveApiKeyOrFailureOption: saveApiKeyOrFailureOption == freezed
           ? _value.saveApiKeyOrFailureOption
           : saveApiKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, Unit>>,
+      saveGeocoderKeyOrFailureOption: saveGeocoderKeyOrFailureOption == freezed
+          ? _value.saveGeocoderKeyOrFailureOption
+          : saveGeocoderKeyOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, Unit>>,
       saveApiUrlOrFailureOption: saveApiUrlOrFailureOption == freezed
           ? _value.saveApiUrlOrFailureOption
@@ -192,7 +229,9 @@ class _$_SplashState implements _SplashState {
   const _$_SplashState(
       {required this.fetchApiUrlOrFailureOption,
       required this.fetchApiKeyOrFailureOption,
+      required this.fetchGeocoderKeyOrFailureOption,
       required this.saveApiKeyOrFailureOption,
+      required this.saveGeocoderKeyOrFailureOption,
       required this.saveApiUrlOrFailureOption,
       required this.status,
       required this.isLoading});
@@ -204,7 +243,12 @@ class _$_SplashState implements _SplashState {
   final Option<Either<Failure, RemoteConfig<String, String>>>
       fetchApiKeyOrFailureOption;
   @override
+  final Option<Either<Failure, RemoteConfig<String, String>>>
+      fetchGeocoderKeyOrFailureOption;
+  @override
   final Option<Either<Failure, Unit>> saveApiKeyOrFailureOption;
+  @override
+  final Option<Either<Failure, Unit>> saveGeocoderKeyOrFailureOption;
   @override
   final Option<Either<Failure, Unit>> saveApiUrlOrFailureOption;
   @override
@@ -214,7 +258,7 @@ class _$_SplashState implements _SplashState {
 
   @override
   String toString() {
-    return 'SplashState(fetchApiUrlOrFailureOption: $fetchApiUrlOrFailureOption, fetchApiKeyOrFailureOption: $fetchApiKeyOrFailureOption, saveApiKeyOrFailureOption: $saveApiKeyOrFailureOption, saveApiUrlOrFailureOption: $saveApiUrlOrFailureOption, status: $status, isLoading: $isLoading)';
+    return 'SplashState(fetchApiUrlOrFailureOption: $fetchApiUrlOrFailureOption, fetchApiKeyOrFailureOption: $fetchApiKeyOrFailureOption, fetchGeocoderKeyOrFailureOption: $fetchGeocoderKeyOrFailureOption, saveApiKeyOrFailureOption: $saveApiKeyOrFailureOption, saveGeocoderKeyOrFailureOption: $saveGeocoderKeyOrFailureOption, saveApiUrlOrFailureOption: $saveApiUrlOrFailureOption, status: $status, isLoading: $isLoading)';
   }
 
   @override
@@ -227,7 +271,13 @@ class _$_SplashState implements _SplashState {
             const DeepCollectionEquality().equals(
                 other.fetchApiKeyOrFailureOption, fetchApiKeyOrFailureOption) &&
             const DeepCollectionEquality().equals(
+                other.fetchGeocoderKeyOrFailureOption,
+                fetchGeocoderKeyOrFailureOption) &&
+            const DeepCollectionEquality().equals(
                 other.saveApiKeyOrFailureOption, saveApiKeyOrFailureOption) &&
+            const DeepCollectionEquality().equals(
+                other.saveGeocoderKeyOrFailureOption,
+                saveGeocoderKeyOrFailureOption) &&
             const DeepCollectionEquality().equals(
                 other.saveApiUrlOrFailureOption, saveApiUrlOrFailureOption) &&
             const DeepCollectionEquality().equals(other.status, status) &&
@@ -239,7 +289,9 @@ class _$_SplashState implements _SplashState {
       runtimeType,
       const DeepCollectionEquality().hash(fetchApiUrlOrFailureOption),
       const DeepCollectionEquality().hash(fetchApiKeyOrFailureOption),
+      const DeepCollectionEquality().hash(fetchGeocoderKeyOrFailureOption),
       const DeepCollectionEquality().hash(saveApiKeyOrFailureOption),
+      const DeepCollectionEquality().hash(saveGeocoderKeyOrFailureOption),
       const DeepCollectionEquality().hash(saveApiUrlOrFailureOption),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(isLoading));
@@ -256,7 +308,10 @@ abstract class _SplashState implements SplashState {
           fetchApiUrlOrFailureOption,
       required Option<Either<Failure, RemoteConfig<String, String>>>
           fetchApiKeyOrFailureOption,
+      required Option<Either<Failure, RemoteConfig<String, String>>>
+          fetchGeocoderKeyOrFailureOption,
       required Option<Either<Failure, Unit>> saveApiKeyOrFailureOption,
+      required Option<Either<Failure, Unit>> saveGeocoderKeyOrFailureOption,
       required Option<Either<Failure, Unit>> saveApiUrlOrFailureOption,
       required SplashStatus status,
       required bool isLoading}) = _$_SplashState;
@@ -268,7 +323,12 @@ abstract class _SplashState implements SplashState {
   Option<Either<Failure, RemoteConfig<String, String>>>
       get fetchApiKeyOrFailureOption;
   @override
+  Option<Either<Failure, RemoteConfig<String, String>>>
+      get fetchGeocoderKeyOrFailureOption;
+  @override
   Option<Either<Failure, Unit>> get saveApiKeyOrFailureOption;
+  @override
+  Option<Either<Failure, Unit>> get saveGeocoderKeyOrFailureOption;
   @override
   Option<Either<Failure, Unit>> get saveApiUrlOrFailureOption;
   @override

@@ -30,10 +30,11 @@ class AppBlocObserver extends BlocObserver {
 Future<void> bootstrap(
   FutureOr<Widget> Function() builder, {
   required String environment,
+  required FirebaseOptions firebaseOptions,
 }) async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  configureDependencies(environment: environment);
+  await Firebase.initializeApp(options: firebaseOptions);
+  await configureDependencies(environment: environment);
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };

@@ -36,12 +36,12 @@ class _$WeatherTearOff {
       required double cloudCover,
       required double solarRadiation,
       required double? solarEnergy,
-      required int uvIndex,
-      required int severeRisk,
-      required String condition,
-      required String icon,
+      required double uvIndex,
+      required double severeRisk,
+      required String? condition,
+      required String? icon,
       required List<String>? stations,
-      required String source,
+      required String? source,
       List<Weather>? hours}) {
     return _Weather(
       dateTime: dateTime,
@@ -96,12 +96,12 @@ mixin _$Weather {
   double get cloudCover => throw _privateConstructorUsedError;
   double get solarRadiation => throw _privateConstructorUsedError;
   double? get solarEnergy => throw _privateConstructorUsedError;
-  int get uvIndex => throw _privateConstructorUsedError;
-  int get severeRisk => throw _privateConstructorUsedError;
-  String get condition => throw _privateConstructorUsedError;
-  String get icon => throw _privateConstructorUsedError;
+  double get uvIndex => throw _privateConstructorUsedError;
+  double get severeRisk => throw _privateConstructorUsedError;
+  String? get condition => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
   List<String>? get stations => throw _privateConstructorUsedError;
-  String get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
   List<Weather>? get hours => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -131,12 +131,12 @@ abstract class $WeatherCopyWith<$Res> {
       double cloudCover,
       double solarRadiation,
       double? solarEnergy,
-      int uvIndex,
-      int severeRisk,
-      String condition,
-      String icon,
+      double uvIndex,
+      double severeRisk,
+      String? condition,
+      String? icon,
       List<String>? stations,
-      String source,
+      String? source,
       List<Weather>? hours});
 }
 
@@ -252,19 +252,19 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
       uvIndex: uvIndex == freezed
           ? _value.uvIndex
           : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       severeRisk: severeRisk == freezed
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       condition: condition == freezed
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       stations: stations == freezed
           ? _value.stations
           : stations // ignore: cast_nullable_to_non_nullable
@@ -272,7 +272,7 @@ class _$WeatherCopyWithImpl<$Res> implements $WeatherCopyWith<$Res> {
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       hours: hours == freezed
           ? _value.hours
           : hours // ignore: cast_nullable_to_non_nullable
@@ -305,12 +305,12 @@ abstract class _$WeatherCopyWith<$Res> implements $WeatherCopyWith<$Res> {
       double cloudCover,
       double solarRadiation,
       double? solarEnergy,
-      int uvIndex,
-      int severeRisk,
-      String condition,
-      String icon,
+      double uvIndex,
+      double severeRisk,
+      String? condition,
+      String? icon,
       List<String>? stations,
-      String source,
+      String? source,
       List<Weather>? hours});
 }
 
@@ -427,19 +427,19 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
       uvIndex: uvIndex == freezed
           ? _value.uvIndex
           : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       severeRisk: severeRisk == freezed
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       condition: condition == freezed
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       stations: stations == freezed
           ? _value.stations
           : stations // ignore: cast_nullable_to_non_nullable
@@ -447,7 +447,7 @@ class __$WeatherCopyWithImpl<$Res> extends _$WeatherCopyWithImpl<$Res>
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       hours: hours == freezed
           ? _value.hours
           : hours // ignore: cast_nullable_to_non_nullable
@@ -523,17 +523,17 @@ class _$_Weather implements _Weather {
   @override
   final double? solarEnergy;
   @override
-  final int uvIndex;
+  final double uvIndex;
   @override
-  final int severeRisk;
+  final double severeRisk;
   @override
-  final String condition;
+  final String? condition;
   @override
-  final String icon;
+  final String? icon;
   @override
   final List<String>? stations;
   @override
-  final String source;
+  final String? source;
   @override
   final List<Weather>? hours;
 
@@ -640,12 +640,12 @@ abstract class _Weather implements Weather {
       required double cloudCover,
       required double solarRadiation,
       required double? solarEnergy,
-      required int uvIndex,
-      required int severeRisk,
-      required String condition,
-      required String icon,
+      required double uvIndex,
+      required double severeRisk,
+      required String? condition,
+      required String? icon,
       required List<String>? stations,
-      required String source,
+      required String? source,
       List<Weather>? hours}) = _$_Weather;
 
   @override
@@ -685,17 +685,17 @@ abstract class _Weather implements Weather {
   @override
   double? get solarEnergy;
   @override
-  int get uvIndex;
+  double get uvIndex;
   @override
-  int get severeRisk;
+  double get severeRisk;
   @override
-  String get condition;
+  String? get condition;
   @override
-  String get icon;
+  String? get icon;
   @override
   List<String>? get stations;
   @override
-  String get source;
+  String? get source;
   @override
   List<Weather>? get hours;
   @override

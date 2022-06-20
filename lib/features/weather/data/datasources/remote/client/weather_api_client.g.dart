@@ -15,15 +15,18 @@ class _WeatherApiClient implements WeatherApiClient {
 
   @override
   Future<ResponseWeather> getWeather(query,
-      [unitGroup = UnitGroup.metric, contentType = 'json']) async {
+      [unitGroup = 'metric', contentType = 'json']) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'contentType': contentType};
+    final queryParameters = <String, dynamic>{
+      r'unitGroup': unitGroup,
+      r'contentType': contentType
+    };
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ResponseWeather>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, 'service/timeline/${query}',
+                .compose(_dio.options, 'services/timeline/${query}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ResponseWeather.fromJson(_result.data!);

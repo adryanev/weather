@@ -45,3 +45,26 @@ fix:
 .PHONY: check-fix
 check-fix:
 	@dart fix --dry-run
+
+.PHONY: firebase-dev
+firebase-dev:
+	@flutterfire config -y --account dev.adryanev@gmail.com --project=flutter-weather-23117 --out=lib/firebase_options_dev.dart  --ios-bundle-id=dev.adryanev.weather.dev --android-package-name=dev.adryanev.weather.dev
+
+.PHONY: firebase-stg
+firebase-stg:
+	@flutterfire config -y --account dev.adryanev@gmail.com --project=flutter-weather-23117 --out=lib/firebase_options_stg.dart  --ios-bundle-id=dev.adryanev.weather.stg --android-package-name=dev.adryanev.weather.stg
+
+.PHONY: firebase-prod
+firebase-prod:
+	@flutterfire config -y --account dev.adryanev@gmail.com --project=flutter-weather-production --out=lib/firebase_options.dart  --ios-bundle-id=dev.adryanev.weather --android-package-name=dev.adryanev.weather
+
+.PHONY: analyze
+analyze:
+	@flutter analyze lib test
+
+.PHONY: format
+format:
+	@flutter format --set-exit-if-changed lib test
+
+.PHONY: prepare
+prepare: fix format analyze

@@ -3,18 +3,24 @@
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_geocoding/google_geocoding.dart';
 import 'package:injectable/injectable.dart';
+import 'package:weather/core/data/storages/local_storage.dart';
 import 'package:weather/core/domain/failures/failure.dart';
 
 abstract class LocationDataSource {
   Future<Either<Failure, Position>> getCurrentLocation();
   Future<bool> checkPermission();
   Future<bool> isLocationServiceEnable();
+  Future<Either<Failure, String?>> getCurrentPlaceName(Position position);
 }
 
 @LazySingleton(as: LocationDataSource)
 class LocationDataSourceImpl implements LocationDataSource {
+  const LocationDataSourceImpl(this._preference);
+  final LocalStorage _preference;
   @override
   Future<Either<Failure, Position>> getCurrentLocation() async {
     try {
@@ -70,5 +76,23 @@ Location permissions are permanently denied, we cannot request permissions.
       return Future.error('Location services are disabled.');
     }
     return true;
+  }
+
+  @override
+  Future<Either<Failure, String?>> getCurrentPlaceName(
+    Position position,
+  ) async {
+    try {
+      final apiKey = await _preference.getGeocoderApiKey();
+      final geocoder = GoogleGeocoding(apiKey!);
+      final data = await geocoder.geocoding
+          .getReverse(LatLon(position.latitude, position.longitude));
+      return right(
+        data?.results?.firstOrNull?.formattedAddress,
+      );
+    } catch (e, stack) {
+      log(e.toString(), stackTrace: stack);
+      return left(const Failure.locationFailure());
+    }
   }
 }

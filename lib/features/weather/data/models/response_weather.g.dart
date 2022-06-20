@@ -13,7 +13,7 @@ _$_ResponseWeather _$$_ResponseWeatherFromJson(Map<String, dynamic> json) =>
       resolvedAddress: json['resolvedAddress'] as String,
       address: json['address'] as String,
       timezone: json['timezone'] as String,
-      timezoneOffset: json['timezoneOffset'] as int,
+      timezoneOffset: json['timezoneOffset'] as int?,
       description: json['description'] as String,
       days: (json['days'] as List<dynamic>?)
           ?.map((e) => ResponseWeatherData.fromJson(e as Map<String, dynamic>))
@@ -61,10 +61,10 @@ _$_ResponseWeatherData _$$_ResponseWeatherDataFromJson(
       cloudCover: (json['cloudcover'] as num).toDouble(),
       solarRadiation: (json['solarradiation'] as num).toDouble(),
       solarEnergy: (json['solarenergy'] as num?)?.toDouble(),
-      uvIndex: json['uvindex'] as int,
-      severeRisk: json['severerisk'] as int,
-      condition: json['condition'] as String,
-      icon: json['icon'] as String,
+      uvIndex: (json['uvindex'] as num).toDouble(),
+      severeRisk: (json['severerisk'] as num).toDouble(),
+      conditions: json['conditions'] as String?,
+      icon: json['icon'] as String?,
       stations: (json['stations'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -98,7 +98,7 @@ Map<String, dynamic> _$$_ResponseWeatherDataToJson(
       'solarenergy': instance.solarEnergy,
       'uvindex': instance.uvIndex,
       'severerisk': instance.severeRisk,
-      'condition': instance.condition,
+      'conditions': instance.conditions,
       'icon': instance.icon,
       'stations': instance.stations,
       'source': instance.source,

@@ -55,6 +55,10 @@ class App extends StatelessWidget {
               fontFamily: GoogleFonts.poppins().fontFamily,
               textTheme: Typography.englishLike2018.apply(
                 fontSizeFactor: 1.sp,
+                bodyColor: AppColor.white,
+              ),
+              progressIndicatorTheme: const ProgressIndicatorThemeData(
+                color: AppColor.white,
               ),
             ),
             localizationsDelegates: const [
