@@ -1,7 +1,10 @@
-import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:weather/core/network/adapters/dio_adapter_stubs.dart'
+    if (dart.library.io) 'package:weather/core/network/adapters/dio_non_web_adapter.dart'
+    if (dart.library.js) 'package:weather/core/network/adapters/dio_web_adapter.dart';
 import 'package:weather/core/network/interceptors/api_key_interceptor.dart';
 import 'package:weather/core/network/interceptors/url_interceptor.dart';
 
@@ -24,8 +27,11 @@ class DioModule with DioMixin implements Dio {
         requestBody: true,
       ),
     ]);
-
-    httpClientAdapter = DefaultHttpClientAdapter();
+    if (kIsWeb) {
+      httpClientAdapter = getAdapter();
+    } else {
+      httpClientAdapter = getAdapter();
+    }
   }
   final UrlInterceptor _urlInterceptor;
   final ApiKeyInterceptor _apiKeyInterceptor;
