@@ -21,7 +21,6 @@ class CurrentWeatherInfo extends StatelessWidget {
         crossAxisCount: 2,
         childAspectRatio: 3,
         mainAxisSpacing: 16.h,
-        // padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 8.w),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,6 +28,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             children: [
               Assets.icons.locationCurrent.svg(
                 color: AppColor.white,
+                height: 40.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,6 +45,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             children: [
               Assets.icons.fluentWeatherRainShowersDay24Regular.svg(
                 color: AppColor.white,
+                height: 40.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,6 +66,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             children: [
               Assets.icons.temperature.svg(
                 color: AppColor.white,
+                height: 40.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,6 +83,7 @@ class CurrentWeatherInfo extends StatelessWidget {
             children: [
               Assets.icons.ionWaterOutline.svg(
                 color: AppColor.white,
+                height: 40.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

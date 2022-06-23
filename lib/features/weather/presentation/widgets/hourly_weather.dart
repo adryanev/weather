@@ -5,6 +5,7 @@ import 'package:weather/core/utils/colors.dart';
 import 'package:weather/core/utils/constants.dart';
 import 'package:weather/core/utils/dimensions.dart';
 import 'package:weather/features/weather/domain/entities/weather.dart';
+import 'package:weather/gen/assets.gen.dart';
 import 'package:weather/l10n/l10n.dart';
 
 class HourlyWeather extends StatelessWidget {
@@ -14,6 +15,7 @@ class HourlyWeather extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final dateFormat = DateTimeFormat.hourMinutes;
+
     return Padding(
       padding: Dimension.aroundPadding,
       child: Column(
@@ -25,7 +27,9 @@ class HourlyWeather extends StatelessWidget {
             height: 8.h,
           ),
           SvgPicture.asset(
-            'icons/${weather?.icon}.svg',
+            weather == null
+                ? Assets.icons.clearNight.path
+                : 'assets/icons/${weather?.icon}.svg',
             height: 32.h,
             color: AppColor.white,
           ),

@@ -6,6 +6,7 @@ import 'package:weather/core/utils/constants.dart';
 import 'package:weather/core/utils/context_extensions.dart';
 import 'package:weather/core/utils/dimensions.dart';
 import 'package:weather/features/weather/domain/entities/weather.dart';
+import 'package:weather/gen/assets.gen.dart';
 import 'package:weather/l10n/l10n.dart';
 
 class CurrentWeather extends StatelessWidget {
@@ -23,7 +24,9 @@ class CurrentWeather extends StatelessWidget {
         Padding(
           padding: Dimension.aroundPadding,
           child: SvgPicture.asset(
-            'icons/${weather?.icon}.svg',
+            weather == null
+                ? Assets.icons.clearNight.path
+                : 'assets/icons/${weather?.icon}.svg',
             color: AppColor.white,
             width: 0.2.sw,
             height: 0.12.sh,

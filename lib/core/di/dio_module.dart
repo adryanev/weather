@@ -27,11 +27,8 @@ class DioModule with DioMixin implements Dio {
         requestBody: true,
       ),
     ]);
-    if (kIsWeb) {
-      httpClientAdapter = getAdapter();
-    } else {
-      httpClientAdapter = getAdapter();
-    }
+
+    httpClientAdapter = getAdapter();
   }
   final UrlInterceptor _urlInterceptor;
   final ApiKeyInterceptor _apiKeyInterceptor;

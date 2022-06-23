@@ -95,6 +95,16 @@ class $AssetsIconsGen {
   /// File path: assets/icons/check.svg
   SvgGenImage get check => const SvgGenImage('assets/icons/check.svg');
 
+  /// File path: assets/icons/clear-day.svg
+  SvgGenImage get clearDay => const SvgGenImage('assets/icons/clear-day.svg');
+
+  /// File path: assets/icons/clear-night.svg
+  SvgGenImage get clearNight =>
+      const SvgGenImage('assets/icons/clear-night.svg');
+
+  /// File path: assets/icons/cloudy.svg
+  SvgGenImage get cloudy => const SvgGenImage('assets/icons/cloudy.svg');
+
   /// File path: assets/icons/fluent_weather-moon-24-filled.svg
   SvgGenImage get fluentWeatherMoon24Filled =>
       const SvgGenImage('assets/icons/fluent_weather-moon-24-filled.svg');
@@ -183,6 +193,12 @@ class $AssetsIconsGen {
   SvgGenImage get fluentWeatherSunny28Filled =>
       const SvgGenImage('assets/icons/fluent_weather-sunny-28-filled.svg');
 
+  /// File path: assets/icons/fog.svg
+  SvgGenImage get fog => const SvgGenImage('assets/icons/fog.svg');
+
+  /// File path: assets/icons/hail.svg
+  SvgGenImage get hail => const SvgGenImage('assets/icons/hail.svg');
+
   /// File path: assets/icons/ion_water-outline.svg
   SvgGenImage get ionWaterOutline =>
       const SvgGenImage('assets/icons/ion_water-outline.svg');
@@ -201,15 +217,77 @@ class $AssetsIconsGen {
   SvgGenImage get overflowMenuVertical =>
       const SvgGenImage('assets/icons/overflow-menu-vertical.svg');
 
+  /// File path: assets/icons/partly-cloudy-day.svg
+  SvgGenImage get partlyCloudyDay =>
+      const SvgGenImage('assets/icons/partly-cloudy-day.svg');
+
+  /// File path: assets/icons/partly-cloudy-night.svg
+  SvgGenImage get partlyCloudyNight =>
+      const SvgGenImage('assets/icons/partly-cloudy-night.svg');
+
   /// File path: assets/icons/plus.svg
   SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
+
+  /// File path: assets/icons/rain-snow-showers-day.svg
+  SvgGenImage get rainSnowShowersDay =>
+      const SvgGenImage('assets/icons/rain-snow-showers-day.svg');
+
+  /// File path: assets/icons/rain-snow-showers-night.svg
+  SvgGenImage get rainSnowShowersNight =>
+      const SvgGenImage('assets/icons/rain-snow-showers-night.svg');
+
+  /// File path: assets/icons/rain-snow.svg
+  SvgGenImage get rainSnow => const SvgGenImage('assets/icons/rain-snow.svg');
+
+  /// File path: assets/icons/rain.svg
+  SvgGenImage get rain => const SvgGenImage('assets/icons/rain.svg');
+
+  /// File path: assets/icons/showers-day.svg
+  SvgGenImage get showersDay =>
+      const SvgGenImage('assets/icons/showers-day.svg');
+
+  /// File path: assets/icons/showers-night.svg
+  SvgGenImage get showersNight =>
+      const SvgGenImage('assets/icons/showers-night.svg');
+
+  /// File path: assets/icons/sleet.svg
+  SvgGenImage get sleet => const SvgGenImage('assets/icons/sleet.svg');
 
   /// File path: assets/icons/snow-heavy.svg
   SvgGenImage get snowHeavy => const SvgGenImage('assets/icons/snow-heavy.svg');
 
+  /// File path: assets/icons/snow-showers-day.svg
+  SvgGenImage get snowShowersDay =>
+      const SvgGenImage('assets/icons/snow-showers-day.svg');
+
+  /// File path: assets/icons/snow-showers-night.svg
+  SvgGenImage get snowShowersNight =>
+      const SvgGenImage('assets/icons/snow-showers-night.svg');
+
+  /// File path: assets/icons/snow.svg
+  SvgGenImage get snow => const SvgGenImage('assets/icons/snow.svg');
+
   /// File path: assets/icons/temperature.svg
   SvgGenImage get temperature =>
       const SvgGenImage('assets/icons/temperature.svg');
+
+  /// File path: assets/icons/thunder-rain.svg
+  SvgGenImage get thunderRain =>
+      const SvgGenImage('assets/icons/thunder-rain.svg');
+
+  /// File path: assets/icons/thunder-showers-day.svg
+  SvgGenImage get thunderShowersDay =>
+      const SvgGenImage('assets/icons/thunder-showers-day.svg');
+
+  /// File path: assets/icons/thunder-showers-night.svg
+  SvgGenImage get thunderShowersNight =>
+      const SvgGenImage('assets/icons/thunder-showers-night.svg');
+
+  /// File path: assets/icons/thunder.svg
+  SvgGenImage get thunder => const SvgGenImage('assets/icons/thunder.svg');
+
+  /// File path: assets/icons/wind.svg
+  SvgGenImage get wind => const SvgGenImage('assets/icons/wind.svg');
 }
 
 class Assets {

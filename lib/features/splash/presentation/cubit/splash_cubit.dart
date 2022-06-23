@@ -39,7 +39,9 @@ class SplashCubit extends Cubit<SplashState> {
 
   FutureOr<void> fetchApiKey() async {
     emit(
-      state.copyWith(isLoading: true, status: SplashStatus.fetchApiKey),
+      state.copyWith(
+        status: SplashStatus.fetchApiKey,
+      ),
     );
 
     final result = await _fetchRemoteConfigApiKeyUseCase(NoParams());
@@ -50,7 +52,6 @@ class SplashCubit extends Cubit<SplashState> {
     );
     emit(
       state.copyWith(
-        isLoading: false,
         fetchApiKeyOrFailureOption: none(),
       ),
     );
@@ -59,7 +60,6 @@ class SplashCubit extends Cubit<SplashState> {
   FutureOr<void> fetchApiUrl() async {
     emit(
       state.copyWith(
-        isLoading: true,
         status: SplashStatus.fetchApiUrl,
       ),
     );
@@ -73,7 +73,6 @@ class SplashCubit extends Cubit<SplashState> {
 
     emit(
       state.copyWith(
-        isLoading: false,
         fetchApiUrlOrFailureOption: none(),
       ),
     );
@@ -81,7 +80,10 @@ class SplashCubit extends Cubit<SplashState> {
 
   FutureOr<void> fetchGeocoderKey() async {
     emit(
-      state.copyWith(isLoading: true, status: SplashStatus.fetchGeocoderKey),
+      state.copyWith(
+        isLoading: true,
+        status: SplashStatus.fetchGeocoderKey,
+      ),
     );
 
     final result = await _fetchRemoteConfigGeocoderKeyUseCase(NoParams());
@@ -93,7 +95,6 @@ class SplashCubit extends Cubit<SplashState> {
 
     emit(
       state.copyWith(
-        isLoading: false,
         fetchGeocoderKeyOrFailureOption: none(),
       ),
     );
@@ -102,7 +103,6 @@ class SplashCubit extends Cubit<SplashState> {
   FutureOr<void> saveApiKey(RemoteConfig<String, String> remoteConfig) async {
     emit(
       state.copyWith(
-        isLoading: true,
         status: SplashStatus.saveApiKey,
       ),
     );
@@ -113,7 +113,6 @@ class SplashCubit extends Cubit<SplashState> {
 
     emit(
       state.copyWith(
-        isLoading: false,
         saveApiKeyOrFailureOption: none(),
       ),
     );
@@ -122,7 +121,6 @@ class SplashCubit extends Cubit<SplashState> {
   FutureOr<void> saveApiUrl(RemoteConfig<String, String> remoteConfig) async {
     emit(
       state.copyWith(
-        isLoading: true,
         status: SplashStatus.saveApiUrl,
       ),
     );
@@ -144,7 +142,6 @@ class SplashCubit extends Cubit<SplashState> {
   ) async {
     emit(
       state.copyWith(
-        isLoading: true,
         status: SplashStatus.saveGeocoderKey,
       ),
     );
@@ -154,7 +151,6 @@ class SplashCubit extends Cubit<SplashState> {
     emit(state.copyWith(saveGeocoderKeyOrFailureOption: optionOf(result)));
     emit(
       state.copyWith(
-        isLoading: false,
         saveGeocoderKeyOrFailureOption: none(),
       ),
     );

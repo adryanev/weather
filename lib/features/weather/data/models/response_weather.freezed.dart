@@ -385,29 +385,29 @@ class _$ResponseWeatherDataTearOff {
   _ResponseWeatherData call(
       {required String datetime,
       required int datetimeEpoch,
-      @JsonKey(name: 'temp') required double temperature,
-      @JsonKey(name: 'feelslike') required double feelsLike,
-      required double humidity,
-      required double dew,
-      @JsonKey(name: 'precip') required double precipitation,
-      @JsonKey(name: 'precipprob') required double precipitationProbability,
-      required double snow,
-      @JsonKey(name: 'snowdepth') required double snowDepth,
+      @JsonKey(name: 'temp') required double? temperature,
+      @JsonKey(name: 'feelslike') required double? feelsLike,
+      required double? humidity,
+      required double? dew,
+      @JsonKey(name: 'precip') required double? precipitation,
+      @JsonKey(name: 'precipprob') required double? precipitationProbability,
+      required double? snow,
+      @JsonKey(name: 'snowdepth') required double? snowDepth,
       required List<String>? precipitationTypes,
-      @JsonKey(name: 'windgust') required double windGust,
-      @JsonKey(name: 'windspeed') required double windSpeed,
-      @JsonKey(name: 'winddir') required double windDirection,
-      required double pressure,
-      required double visibility,
-      @JsonKey(name: 'cloudcover') required double cloudCover,
-      @JsonKey(name: 'solarradiation') required double solarRadiation,
+      @JsonKey(name: 'windgust') required double? windGust,
+      @JsonKey(name: 'windspeed') required double? windSpeed,
+      @JsonKey(name: 'winddir') required double? windDirection,
+      required double? pressure,
+      required double? visibility,
+      @JsonKey(name: 'cloudcover') required double? cloudCover,
+      @JsonKey(name: 'solarradiation') required double? solarRadiation,
       @JsonKey(name: 'solarenergy') required double? solarEnergy,
-      @JsonKey(name: 'uvindex') required double uvIndex,
-      @JsonKey(name: 'severerisk') required double severeRisk,
+      @JsonKey(name: 'uvindex') required double? uvIndex,
+      @JsonKey(name: 'severerisk') required double? severeRisk,
       required String? conditions,
       required String? icon,
       required List<String>? stations,
-      required String source,
+      required String? source,
       List<ResponseWeatherData>? hours}) {
     return _ResponseWeatherData(
       datetime: datetime,
@@ -452,41 +452,41 @@ mixin _$ResponseWeatherData {
   String get datetime => throw _privateConstructorUsedError;
   int get datetimeEpoch => throw _privateConstructorUsedError;
   @JsonKey(name: 'temp')
-  double get temperature => throw _privateConstructorUsedError;
+  double? get temperature => throw _privateConstructorUsedError;
   @JsonKey(name: 'feelslike')
-  double get feelsLike => throw _privateConstructorUsedError;
-  double get humidity => throw _privateConstructorUsedError;
-  double get dew => throw _privateConstructorUsedError;
+  double? get feelsLike => throw _privateConstructorUsedError;
+  double? get humidity => throw _privateConstructorUsedError;
+  double? get dew => throw _privateConstructorUsedError;
   @JsonKey(name: 'precip')
-  double get precipitation => throw _privateConstructorUsedError;
+  double? get precipitation => throw _privateConstructorUsedError;
   @JsonKey(name: 'precipprob')
-  double get precipitationProbability => throw _privateConstructorUsedError;
-  double get snow => throw _privateConstructorUsedError;
+  double? get precipitationProbability => throw _privateConstructorUsedError;
+  double? get snow => throw _privateConstructorUsedError;
   @JsonKey(name: 'snowdepth')
-  double get snowDepth => throw _privateConstructorUsedError;
+  double? get snowDepth => throw _privateConstructorUsedError;
   List<String>? get precipitationTypes => throw _privateConstructorUsedError;
   @JsonKey(name: 'windgust')
-  double get windGust => throw _privateConstructorUsedError;
+  double? get windGust => throw _privateConstructorUsedError;
   @JsonKey(name: 'windspeed')
-  double get windSpeed => throw _privateConstructorUsedError;
+  double? get windSpeed => throw _privateConstructorUsedError;
   @JsonKey(name: 'winddir')
-  double get windDirection => throw _privateConstructorUsedError;
-  double get pressure => throw _privateConstructorUsedError;
-  double get visibility => throw _privateConstructorUsedError;
+  double? get windDirection => throw _privateConstructorUsedError;
+  double? get pressure => throw _privateConstructorUsedError;
+  double? get visibility => throw _privateConstructorUsedError;
   @JsonKey(name: 'cloudcover')
-  double get cloudCover => throw _privateConstructorUsedError;
+  double? get cloudCover => throw _privateConstructorUsedError;
   @JsonKey(name: 'solarradiation')
-  double get solarRadiation => throw _privateConstructorUsedError;
+  double? get solarRadiation => throw _privateConstructorUsedError;
   @JsonKey(name: 'solarenergy')
   double? get solarEnergy => throw _privateConstructorUsedError;
   @JsonKey(name: 'uvindex')
-  double get uvIndex => throw _privateConstructorUsedError;
+  double? get uvIndex => throw _privateConstructorUsedError;
   @JsonKey(name: 'severerisk')
-  double get severeRisk => throw _privateConstructorUsedError;
+  double? get severeRisk => throw _privateConstructorUsedError;
   String? get conditions => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   List<String>? get stations => throw _privateConstructorUsedError;
-  String get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
   List<ResponseWeatherData>? get hours => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -503,29 +503,29 @@ abstract class $ResponseWeatherDataCopyWith<$Res> {
   $Res call(
       {String datetime,
       int datetimeEpoch,
-      @JsonKey(name: 'temp') double temperature,
-      @JsonKey(name: 'feelslike') double feelsLike,
-      double humidity,
-      double dew,
-      @JsonKey(name: 'precip') double precipitation,
-      @JsonKey(name: 'precipprob') double precipitationProbability,
-      double snow,
-      @JsonKey(name: 'snowdepth') double snowDepth,
+      @JsonKey(name: 'temp') double? temperature,
+      @JsonKey(name: 'feelslike') double? feelsLike,
+      double? humidity,
+      double? dew,
+      @JsonKey(name: 'precip') double? precipitation,
+      @JsonKey(name: 'precipprob') double? precipitationProbability,
+      double? snow,
+      @JsonKey(name: 'snowdepth') double? snowDepth,
       List<String>? precipitationTypes,
-      @JsonKey(name: 'windgust') double windGust,
-      @JsonKey(name: 'windspeed') double windSpeed,
-      @JsonKey(name: 'winddir') double windDirection,
-      double pressure,
-      double visibility,
-      @JsonKey(name: 'cloudcover') double cloudCover,
-      @JsonKey(name: 'solarradiation') double solarRadiation,
+      @JsonKey(name: 'windgust') double? windGust,
+      @JsonKey(name: 'windspeed') double? windSpeed,
+      @JsonKey(name: 'winddir') double? windDirection,
+      double? pressure,
+      double? visibility,
+      @JsonKey(name: 'cloudcover') double? cloudCover,
+      @JsonKey(name: 'solarradiation') double? solarRadiation,
       @JsonKey(name: 'solarenergy') double? solarEnergy,
-      @JsonKey(name: 'uvindex') double uvIndex,
-      @JsonKey(name: 'severerisk') double severeRisk,
+      @JsonKey(name: 'uvindex') double? uvIndex,
+      @JsonKey(name: 'severerisk') double? severeRisk,
       String? conditions,
       String? icon,
       List<String>? stations,
-      String source,
+      String? source,
       List<ResponseWeatherData>? hours});
 }
 
@@ -579,35 +579,35 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
       temperature: temperature == freezed
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       dew: dew == freezed
           ? _value.dew
           : dew // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       precipitation: precipitation == freezed
           ? _value.precipitation
           : precipitation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       precipitationProbability: precipitationProbability == freezed
           ? _value.precipitationProbability
           : precipitationProbability // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       snow: snow == freezed
           ? _value.snow
           : snow // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       snowDepth: snowDepth == freezed
           ? _value.snowDepth
           : snowDepth // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       precipitationTypes: precipitationTypes == freezed
           ? _value.precipitationTypes
           : precipitationTypes // ignore: cast_nullable_to_non_nullable
@@ -615,31 +615,31 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windDirection: windDirection == freezed
           ? _value.windDirection
           : windDirection // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       cloudCover: cloudCover == freezed
           ? _value.cloudCover
           : cloudCover // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       solarRadiation: solarRadiation == freezed
           ? _value.solarRadiation
           : solarRadiation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       solarEnergy: solarEnergy == freezed
           ? _value.solarEnergy
           : solarEnergy // ignore: cast_nullable_to_non_nullable
@@ -647,11 +647,11 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
       uvIndex: uvIndex == freezed
           ? _value.uvIndex
           : uvIndex // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       severeRisk: severeRisk == freezed
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       conditions: conditions == freezed
           ? _value.conditions
           : conditions // ignore: cast_nullable_to_non_nullable
@@ -667,7 +667,7 @@ class _$ResponseWeatherDataCopyWithImpl<$Res>
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       hours: hours == freezed
           ? _value.hours
           : hours // ignore: cast_nullable_to_non_nullable
@@ -686,29 +686,29 @@ abstract class _$ResponseWeatherDataCopyWith<$Res>
   $Res call(
       {String datetime,
       int datetimeEpoch,
-      @JsonKey(name: 'temp') double temperature,
-      @JsonKey(name: 'feelslike') double feelsLike,
-      double humidity,
-      double dew,
-      @JsonKey(name: 'precip') double precipitation,
-      @JsonKey(name: 'precipprob') double precipitationProbability,
-      double snow,
-      @JsonKey(name: 'snowdepth') double snowDepth,
+      @JsonKey(name: 'temp') double? temperature,
+      @JsonKey(name: 'feelslike') double? feelsLike,
+      double? humidity,
+      double? dew,
+      @JsonKey(name: 'precip') double? precipitation,
+      @JsonKey(name: 'precipprob') double? precipitationProbability,
+      double? snow,
+      @JsonKey(name: 'snowdepth') double? snowDepth,
       List<String>? precipitationTypes,
-      @JsonKey(name: 'windgust') double windGust,
-      @JsonKey(name: 'windspeed') double windSpeed,
-      @JsonKey(name: 'winddir') double windDirection,
-      double pressure,
-      double visibility,
-      @JsonKey(name: 'cloudcover') double cloudCover,
-      @JsonKey(name: 'solarradiation') double solarRadiation,
+      @JsonKey(name: 'windgust') double? windGust,
+      @JsonKey(name: 'windspeed') double? windSpeed,
+      @JsonKey(name: 'winddir') double? windDirection,
+      double? pressure,
+      double? visibility,
+      @JsonKey(name: 'cloudcover') double? cloudCover,
+      @JsonKey(name: 'solarradiation') double? solarRadiation,
       @JsonKey(name: 'solarenergy') double? solarEnergy,
-      @JsonKey(name: 'uvindex') double uvIndex,
-      @JsonKey(name: 'severerisk') double severeRisk,
+      @JsonKey(name: 'uvindex') double? uvIndex,
+      @JsonKey(name: 'severerisk') double? severeRisk,
       String? conditions,
       String? icon,
       List<String>? stations,
-      String source,
+      String? source,
       List<ResponseWeatherData>? hours});
 }
 
@@ -764,35 +764,35 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
       temperature: temperature == freezed
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       feelsLike: feelsLike == freezed
           ? _value.feelsLike
           : feelsLike // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       dew: dew == freezed
           ? _value.dew
           : dew // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       precipitation: precipitation == freezed
           ? _value.precipitation
           : precipitation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       precipitationProbability: precipitationProbability == freezed
           ? _value.precipitationProbability
           : precipitationProbability // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       snow: snow == freezed
           ? _value.snow
           : snow // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       snowDepth: snowDepth == freezed
           ? _value.snowDepth
           : snowDepth // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       precipitationTypes: precipitationTypes == freezed
           ? _value.precipitationTypes
           : precipitationTypes // ignore: cast_nullable_to_non_nullable
@@ -800,31 +800,31 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
       windGust: windGust == freezed
           ? _value.windGust
           : windGust // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windSpeed: windSpeed == freezed
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       windDirection: windDirection == freezed
           ? _value.windDirection
           : windDirection // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       pressure: pressure == freezed
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       visibility: visibility == freezed
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       cloudCover: cloudCover == freezed
           ? _value.cloudCover
           : cloudCover // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       solarRadiation: solarRadiation == freezed
           ? _value.solarRadiation
           : solarRadiation // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       solarEnergy: solarEnergy == freezed
           ? _value.solarEnergy
           : solarEnergy // ignore: cast_nullable_to_non_nullable
@@ -832,11 +832,11 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
       uvIndex: uvIndex == freezed
           ? _value.uvIndex
           : uvIndex // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       severeRisk: severeRisk == freezed
           ? _value.severeRisk
           : severeRisk // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       conditions: conditions == freezed
           ? _value.conditions
           : conditions // ignore: cast_nullable_to_non_nullable
@@ -852,7 +852,7 @@ class __$ResponseWeatherDataCopyWithImpl<$Res>
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       hours: hours == freezed
           ? _value.hours
           : hours // ignore: cast_nullable_to_non_nullable
@@ -901,55 +901,55 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
   final int datetimeEpoch;
   @override
   @JsonKey(name: 'temp')
-  final double temperature;
+  final double? temperature;
   @override
   @JsonKey(name: 'feelslike')
-  final double feelsLike;
+  final double? feelsLike;
   @override
-  final double humidity;
+  final double? humidity;
   @override
-  final double dew;
+  final double? dew;
   @override
   @JsonKey(name: 'precip')
-  final double precipitation;
+  final double? precipitation;
   @override
   @JsonKey(name: 'precipprob')
-  final double precipitationProbability;
+  final double? precipitationProbability;
   @override
-  final double snow;
+  final double? snow;
   @override
   @JsonKey(name: 'snowdepth')
-  final double snowDepth;
+  final double? snowDepth;
   @override
   final List<String>? precipitationTypes;
   @override
   @JsonKey(name: 'windgust')
-  final double windGust;
+  final double? windGust;
   @override
   @JsonKey(name: 'windspeed')
-  final double windSpeed;
+  final double? windSpeed;
   @override
   @JsonKey(name: 'winddir')
-  final double windDirection;
+  final double? windDirection;
   @override
-  final double pressure;
+  final double? pressure;
   @override
-  final double visibility;
+  final double? visibility;
   @override
   @JsonKey(name: 'cloudcover')
-  final double cloudCover;
+  final double? cloudCover;
   @override
   @JsonKey(name: 'solarradiation')
-  final double solarRadiation;
+  final double? solarRadiation;
   @override
   @JsonKey(name: 'solarenergy')
   final double? solarEnergy;
   @override
   @JsonKey(name: 'uvindex')
-  final double uvIndex;
+  final double? uvIndex;
   @override
   @JsonKey(name: 'severerisk')
-  final double severeRisk;
+  final double? severeRisk;
   @override
   final String? conditions;
   @override
@@ -957,7 +957,7 @@ class _$_ResponseWeatherData implements _ResponseWeatherData {
   @override
   final List<String>? stations;
   @override
-  final String source;
+  final String? source;
   @override
   final List<ResponseWeatherData>? hours;
 
@@ -1058,29 +1058,29 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
   const factory _ResponseWeatherData(
       {required String datetime,
       required int datetimeEpoch,
-      @JsonKey(name: 'temp') required double temperature,
-      @JsonKey(name: 'feelslike') required double feelsLike,
-      required double humidity,
-      required double dew,
-      @JsonKey(name: 'precip') required double precipitation,
-      @JsonKey(name: 'precipprob') required double precipitationProbability,
-      required double snow,
-      @JsonKey(name: 'snowdepth') required double snowDepth,
+      @JsonKey(name: 'temp') required double? temperature,
+      @JsonKey(name: 'feelslike') required double? feelsLike,
+      required double? humidity,
+      required double? dew,
+      @JsonKey(name: 'precip') required double? precipitation,
+      @JsonKey(name: 'precipprob') required double? precipitationProbability,
+      required double? snow,
+      @JsonKey(name: 'snowdepth') required double? snowDepth,
       required List<String>? precipitationTypes,
-      @JsonKey(name: 'windgust') required double windGust,
-      @JsonKey(name: 'windspeed') required double windSpeed,
-      @JsonKey(name: 'winddir') required double windDirection,
-      required double pressure,
-      required double visibility,
-      @JsonKey(name: 'cloudcover') required double cloudCover,
-      @JsonKey(name: 'solarradiation') required double solarRadiation,
+      @JsonKey(name: 'windgust') required double? windGust,
+      @JsonKey(name: 'windspeed') required double? windSpeed,
+      @JsonKey(name: 'winddir') required double? windDirection,
+      required double? pressure,
+      required double? visibility,
+      @JsonKey(name: 'cloudcover') required double? cloudCover,
+      @JsonKey(name: 'solarradiation') required double? solarRadiation,
       @JsonKey(name: 'solarenergy') required double? solarEnergy,
-      @JsonKey(name: 'uvindex') required double uvIndex,
-      @JsonKey(name: 'severerisk') required double severeRisk,
+      @JsonKey(name: 'uvindex') required double? uvIndex,
+      @JsonKey(name: 'severerisk') required double? severeRisk,
       required String? conditions,
       required String? icon,
       required List<String>? stations,
-      required String source,
+      required String? source,
       List<ResponseWeatherData>? hours}) = _$_ResponseWeatherData;
 
   factory _ResponseWeatherData.fromJson(Map<String, dynamic> json) =
@@ -1092,55 +1092,55 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
   int get datetimeEpoch;
   @override
   @JsonKey(name: 'temp')
-  double get temperature;
+  double? get temperature;
   @override
   @JsonKey(name: 'feelslike')
-  double get feelsLike;
+  double? get feelsLike;
   @override
-  double get humidity;
+  double? get humidity;
   @override
-  double get dew;
+  double? get dew;
   @override
   @JsonKey(name: 'precip')
-  double get precipitation;
+  double? get precipitation;
   @override
   @JsonKey(name: 'precipprob')
-  double get precipitationProbability;
+  double? get precipitationProbability;
   @override
-  double get snow;
+  double? get snow;
   @override
   @JsonKey(name: 'snowdepth')
-  double get snowDepth;
+  double? get snowDepth;
   @override
   List<String>? get precipitationTypes;
   @override
   @JsonKey(name: 'windgust')
-  double get windGust;
+  double? get windGust;
   @override
   @JsonKey(name: 'windspeed')
-  double get windSpeed;
+  double? get windSpeed;
   @override
   @JsonKey(name: 'winddir')
-  double get windDirection;
+  double? get windDirection;
   @override
-  double get pressure;
+  double? get pressure;
   @override
-  double get visibility;
+  double? get visibility;
   @override
   @JsonKey(name: 'cloudcover')
-  double get cloudCover;
+  double? get cloudCover;
   @override
   @JsonKey(name: 'solarradiation')
-  double get solarRadiation;
+  double? get solarRadiation;
   @override
   @JsonKey(name: 'solarenergy')
   double? get solarEnergy;
   @override
   @JsonKey(name: 'uvindex')
-  double get uvIndex;
+  double? get uvIndex;
   @override
   @JsonKey(name: 'severerisk')
-  double get severeRisk;
+  double? get severeRisk;
   @override
   String? get conditions;
   @override
@@ -1148,7 +1148,7 @@ abstract class _ResponseWeatherData implements ResponseWeatherData {
   @override
   List<String>? get stations;
   @override
-  String get source;
+  String? get source;
   @override
   List<ResponseWeatherData>? get hours;
   @override
