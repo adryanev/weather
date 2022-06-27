@@ -6,27 +6,29 @@ import 'package:weather/features/splash/data/datasources/remote_config_data_sour
 
 import '../../../../helpers/firebase/mock.dart';
 
-Future<void> main() async {
+void main() {
   setupFirebaseRemoteConfigMocks();
 
-  late RemoteConfigDataSource systemUnderTest;
   const apiKey = 'Asd12345';
   const apiUrl = 'https://google.com';
-  final config = FakeRemoteConfig();
-  await config.setDefaults(<String, dynamic>{
-    KeyConstants.remoteConfigApiKey: '',
-    KeyConstants.remoteConfigApiUrl: '',
-  });
-
-  config.loadMockData(<String, dynamic>{
-    KeyConstants.remoteConfigApiKey: apiKey,
-    KeyConstants.remoteConfigApiUrl: apiUrl,
-  });
-
-  await config.fetchAndActivate();
+  late RemoteConfigDataSource systemUnderTest;
+  late FakeRemoteConfig config;
 
   setUpAll(() async {
     await Firebase.initializeApp();
+
+    config = FakeRemoteConfig();
+    await config.setDefaults(<String, dynamic>{
+      KeyConstants.remoteConfigApiKey: '',
+      KeyConstants.remoteConfigApiUrl: '',
+    });
+
+    config.loadMockData(<String, dynamic>{
+      KeyConstants.remoteConfigApiKey: apiKey,
+      KeyConstants.remoteConfigApiUrl: apiUrl,
+    });
+
+    await config.fetchAndActivate();
   });
   setUp(() {
     systemUnderTest = RemoteConfigDataSourceImpl(config);
