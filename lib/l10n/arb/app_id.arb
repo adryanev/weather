@@ -5,10 +5,75 @@
   "preferenceFailure": "Tidak bisa mengambil data dari session.",
   "locationFailure": "Tidak bisa membaca lokasi anda sekarang.",
   "locationPermissionFailure": "Mohon berikan izin agar kami bisa mengakses lokasi anda.",
+  "remoteFailure": "Tidak dapat mengambil data dari server",
   "splashInitializing": "Memulai...",
   "splashGetApiKey": "Mendapatkan API key...",
   "splashGetApiUrl": "Mendapatkan weather API url...",
   "splashSaveApiKey": "Menyimpan API key...",
   "splashSaveApiUrl": "Menyimpan API url...",
-  "done": "Selesai"
+  "splashGetGeocoderKey": "Mendapatkan Geocoder key...",
+  "splashSaveGeocoderKey": "Menyimpan Geocoder key...",
+  "done": "Selesai",
+  "temperatureDegree": "{temperature}°",
+  "@temperatureDegree": {
+    "placeholders": {
+      "temperature": {
+        "format": "decimalPattern",
+        "example": "24",
+        "type": "double"
+      },
+      "optionalParameters": {
+        "decimalDigits": 1,
+        "customPattern": "#0.0"
+      }
+    }
+  },
+  "percentage": "{percentage}",
+  "@percentage": {
+    "placeholders": {
+      "temperature": {
+        "format": "percentPattern",
+        "example": "80",
+        "type": "double",
+        "optionalParameters": {
+          "decimalDigits": 2,
+          "customPattern": "#0.00"
+        }
+      }
+    }
+  },
+  "rain": "hujan",
+  "chanceOfRain": "kemungkinan hujan",
+  "wind": "angin",
+  "pressure": "tekanan",
+  "mbar": "mbar",
+  "@mbar": {
+    "placeholders": {
+      "pressure": {
+        "format": "decimalPattern",
+        "example": "80",
+        "type": "double",
+        "optionalParameters": {
+          "decimalDigits": 1,
+          "customPattern": "#0.0"
+        }
+      }
+    }
+  },
+  "humidity": "kelembapan",
+  "kmh": "{speed} km/j",
+  "@kmh": {
+    "placeholders": {
+      "speed": {
+        "format": "decimalPattern",
+        "example": "80",
+        "type": "double",
+        "optionalParameters": {
+          "decimalDigits": 1,
+          "customPattern": "#0.0"
+        }
+      }
+    }
+  },
+  "loading": "memuat..."
 }

@@ -32,6 +32,10 @@ class _$FailureTearOff {
   LocationPermissionFailure locationPermissionFailure() {
     return const LocationPermissionFailure();
   }
+
+  RemoteFailure remoteFailure() {
+    return const RemoteFailure();
+  }
 }
 
 /// @nodoc
@@ -45,6 +49,7 @@ mixin _$Failure {
     required TResult Function() preferenceFailure,
     required TResult Function() locationFailure,
     required TResult Function() locationPermissionFailure,
+    required TResult Function() remoteFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,6 +58,7 @@ mixin _$Failure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,6 +67,7 @@ mixin _$Failure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +78,7 @@ mixin _$Failure {
     required TResult Function(LocationFailure value) locationFailure,
     required TResult Function(LocationPermissionFailure value)
         locationPermissionFailure,
+    required TResult Function(RemoteFailure value) remoteFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,6 +88,7 @@ mixin _$Failure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,6 +98,7 @@ mixin _$Failure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +164,7 @@ class _$RemoteConfigFailure implements RemoteConfigFailure {
     required TResult Function() preferenceFailure,
     required TResult Function() locationFailure,
     required TResult Function() locationPermissionFailure,
+    required TResult Function() remoteFailure,
   }) {
     return remoteConfigFailure();
   }
@@ -165,6 +176,7 @@ class _$RemoteConfigFailure implements RemoteConfigFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
   }) {
     return remoteConfigFailure?.call();
   }
@@ -176,6 +188,7 @@ class _$RemoteConfigFailure implements RemoteConfigFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
     required TResult orElse(),
   }) {
     if (remoteConfigFailure != null) {
@@ -192,6 +205,7 @@ class _$RemoteConfigFailure implements RemoteConfigFailure {
     required TResult Function(LocationFailure value) locationFailure,
     required TResult Function(LocationPermissionFailure value)
         locationPermissionFailure,
+    required TResult Function(RemoteFailure value) remoteFailure,
   }) {
     return remoteConfigFailure(this);
   }
@@ -204,6 +218,7 @@ class _$RemoteConfigFailure implements RemoteConfigFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
   }) {
     return remoteConfigFailure?.call(this);
   }
@@ -216,6 +231,7 @@ class _$RemoteConfigFailure implements RemoteConfigFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
     required TResult orElse(),
   }) {
     if (remoteConfigFailure != null) {
@@ -273,6 +289,7 @@ class _$PreferenceFailure implements PreferenceFailure {
     required TResult Function() preferenceFailure,
     required TResult Function() locationFailure,
     required TResult Function() locationPermissionFailure,
+    required TResult Function() remoteFailure,
   }) {
     return preferenceFailure();
   }
@@ -284,6 +301,7 @@ class _$PreferenceFailure implements PreferenceFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
   }) {
     return preferenceFailure?.call();
   }
@@ -295,6 +313,7 @@ class _$PreferenceFailure implements PreferenceFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
     required TResult orElse(),
   }) {
     if (preferenceFailure != null) {
@@ -311,6 +330,7 @@ class _$PreferenceFailure implements PreferenceFailure {
     required TResult Function(LocationFailure value) locationFailure,
     required TResult Function(LocationPermissionFailure value)
         locationPermissionFailure,
+    required TResult Function(RemoteFailure value) remoteFailure,
   }) {
     return preferenceFailure(this);
   }
@@ -323,6 +343,7 @@ class _$PreferenceFailure implements PreferenceFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
   }) {
     return preferenceFailure?.call(this);
   }
@@ -335,6 +356,7 @@ class _$PreferenceFailure implements PreferenceFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
     required TResult orElse(),
   }) {
     if (preferenceFailure != null) {
@@ -392,6 +414,7 @@ class _$LocationFailure implements LocationFailure {
     required TResult Function() preferenceFailure,
     required TResult Function() locationFailure,
     required TResult Function() locationPermissionFailure,
+    required TResult Function() remoteFailure,
   }) {
     return locationFailure();
   }
@@ -403,6 +426,7 @@ class _$LocationFailure implements LocationFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
   }) {
     return locationFailure?.call();
   }
@@ -414,6 +438,7 @@ class _$LocationFailure implements LocationFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
     required TResult orElse(),
   }) {
     if (locationFailure != null) {
@@ -430,6 +455,7 @@ class _$LocationFailure implements LocationFailure {
     required TResult Function(LocationFailure value) locationFailure,
     required TResult Function(LocationPermissionFailure value)
         locationPermissionFailure,
+    required TResult Function(RemoteFailure value) remoteFailure,
   }) {
     return locationFailure(this);
   }
@@ -442,6 +468,7 @@ class _$LocationFailure implements LocationFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
   }) {
     return locationFailure?.call(this);
   }
@@ -454,6 +481,7 @@ class _$LocationFailure implements LocationFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
     required TResult orElse(),
   }) {
     if (locationFailure != null) {
@@ -514,6 +542,7 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
     required TResult Function() preferenceFailure,
     required TResult Function() locationFailure,
     required TResult Function() locationPermissionFailure,
+    required TResult Function() remoteFailure,
   }) {
     return locationPermissionFailure();
   }
@@ -525,6 +554,7 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
   }) {
     return locationPermissionFailure?.call();
   }
@@ -536,6 +566,7 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
     TResult Function()? preferenceFailure,
     TResult Function()? locationFailure,
     TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
     required TResult orElse(),
   }) {
     if (locationPermissionFailure != null) {
@@ -552,6 +583,7 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
     required TResult Function(LocationFailure value) locationFailure,
     required TResult Function(LocationPermissionFailure value)
         locationPermissionFailure,
+    required TResult Function(RemoteFailure value) remoteFailure,
   }) {
     return locationPermissionFailure(this);
   }
@@ -564,6 +596,7 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
   }) {
     return locationPermissionFailure?.call(this);
   }
@@ -576,6 +609,7 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
     TResult Function(LocationFailure value)? locationFailure,
     TResult Function(LocationPermissionFailure value)?
         locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
     required TResult orElse(),
   }) {
     if (locationPermissionFailure != null) {
@@ -587,4 +621,129 @@ class _$LocationPermissionFailure implements LocationPermissionFailure {
 
 abstract class LocationPermissionFailure implements Failure {
   const factory LocationPermissionFailure() = _$LocationPermissionFailure;
+}
+
+/// @nodoc
+abstract class $RemoteFailureCopyWith<$Res> {
+  factory $RemoteFailureCopyWith(
+          RemoteFailure value, $Res Function(RemoteFailure) then) =
+      _$RemoteFailureCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$RemoteFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
+    implements $RemoteFailureCopyWith<$Res> {
+  _$RemoteFailureCopyWithImpl(
+      RemoteFailure _value, $Res Function(RemoteFailure) _then)
+      : super(_value, (v) => _then(v as RemoteFailure));
+
+  @override
+  RemoteFailure get _value => super._value as RemoteFailure;
+}
+
+/// @nodoc
+
+class _$RemoteFailure implements RemoteFailure {
+  const _$RemoteFailure();
+
+  @override
+  String toString() {
+    return 'Failure.remoteFailure()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is RemoteFailure);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() remoteConfigFailure,
+    required TResult Function() preferenceFailure,
+    required TResult Function() locationFailure,
+    required TResult Function() locationPermissionFailure,
+    required TResult Function() remoteFailure,
+  }) {
+    return remoteFailure();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? remoteConfigFailure,
+    TResult Function()? preferenceFailure,
+    TResult Function()? locationFailure,
+    TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
+  }) {
+    return remoteFailure?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? remoteConfigFailure,
+    TResult Function()? preferenceFailure,
+    TResult Function()? locationFailure,
+    TResult Function()? locationPermissionFailure,
+    TResult Function()? remoteFailure,
+    required TResult orElse(),
+  }) {
+    if (remoteFailure != null) {
+      return remoteFailure();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(RemoteConfigFailure value) remoteConfigFailure,
+    required TResult Function(PreferenceFailure value) preferenceFailure,
+    required TResult Function(LocationFailure value) locationFailure,
+    required TResult Function(LocationPermissionFailure value)
+        locationPermissionFailure,
+    required TResult Function(RemoteFailure value) remoteFailure,
+  }) {
+    return remoteFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RemoteConfigFailure value)? remoteConfigFailure,
+    TResult Function(PreferenceFailure value)? preferenceFailure,
+    TResult Function(LocationFailure value)? locationFailure,
+    TResult Function(LocationPermissionFailure value)?
+        locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
+  }) {
+    return remoteFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RemoteConfigFailure value)? remoteConfigFailure,
+    TResult Function(PreferenceFailure value)? preferenceFailure,
+    TResult Function(LocationFailure value)? locationFailure,
+    TResult Function(LocationPermissionFailure value)?
+        locationPermissionFailure,
+    TResult Function(RemoteFailure value)? remoteFailure,
+    required TResult orElse(),
+  }) {
+    if (remoteFailure != null) {
+      return remoteFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class RemoteFailure implements Failure {
+  const factory RemoteFailure() = _$RemoteFailure;
 }

@@ -17,10 +17,12 @@ extension BuildContextX on BuildContext {
       SnackBar(
         content: Text(message),
         duration: const Duration(seconds: 2),
-        action: action == null && actionText != null
-            ? null
-            : SnackBarAction(label: actionText!, onPressed: action!),
+        // action: action == null && actionText != null
+        //     ? null
+        //     : SnackBarAction(label: actionText!, onPressed: action!),
       ),
     );
   }
+
+  ThemeData get theme => Theme.of(this);
 }

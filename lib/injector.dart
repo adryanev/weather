@@ -5,5 +5,5 @@ import 'package:weather/injector.config.dart';
 final getIt = GetIt.instance;
 
 @InjectableInit(generateForDir: ['lib', 'test'])
-void configureDependencies({required String environment}) =>
+Future<void> configureDependencies({required String environment}) async =>
     $initGetIt(getIt, environment: environment);

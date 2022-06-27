@@ -1,8 +1,9 @@
 part of 'weather_bloc.dart';
 
-abstract class WeatherEvent extends Equatable {
-  const WeatherEvent();
-
-  @override
-  List<Object> get props => [];
+@freezed
+class WeatherEvent with _$WeatherEvent {
+  const factory WeatherEvent.started() = _Started;
+  const factory WeatherEvent.getCurrentLocation() = WeatherGetCurrentLocation;
+  const factory WeatherEvent.getWeatherByLocation(Location location) =
+      WeatherGetByLocation;
 }

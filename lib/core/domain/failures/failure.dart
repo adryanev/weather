@@ -7,4 +7,5 @@ class Failure with _$Failure {
   const factory Failure.preferenceFailure() = PreferenceFailure;
   const factory Failure.locationFailure() = LocationFailure;
   const factory Failure.locationPermissionFailure() = LocationPermissionFailure;
+  const factory Failure.remoteFailure() = RemoteFailure;
 }

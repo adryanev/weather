@@ -1,19 +1,24 @@
 import 'package:go_router/go_router.dart';
 import 'package:weather/features/splash/presentation/pages/splash_page.dart';
+import 'package:weather/features/weather/presentation/pages/weather_page.dart';
 
-class Router {
+class AppRouter {
   static const splash = 'splash';
-  static const auth = 'auth';
+  static const weather = 'weather';
 }
 
 final appRouter = GoRouter(
   debugLogDiagnostics: true,
   routes: [
     GoRoute(
-      name: Router.splash,
+      name: AppRouter.splash,
       path: '/',
       builder: (context, state) => const SplashPage(),
     ),
-    // GoRoute(name: Router.auth, path: '/auth'),
+    GoRoute(
+      name: AppRouter.weather,
+      path: '/${AppRouter.weather}',
+      builder: (context, state) => const WeatherPage(),
+    ),
   ],
 );
