@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:weather/core/utils/colors.dart';
 import 'package:weather/core/utils/constants.dart';
+import 'package:weather/core/utils/context_extensions.dart';
 import 'package:weather/core/utils/dimensions.dart';
 import 'package:weather/features/weather/domain/entities/weather.dart';
 import 'package:weather/gen/assets.gen.dart';
@@ -22,6 +23,9 @@ class HourlyWeather extends StatelessWidget {
         children: [
           Text(
             dateFormat.format(weather?.dateTime ?? DateTime.now()),
+            style: context.theme.textTheme.bodyText1?.copyWith(
+              color: AppColor.white,
+            ),
           ),
           SizedBox(
             height: 8.h,
@@ -39,6 +43,9 @@ class HourlyWeather extends StatelessWidget {
           Text(
             '${l10n.temperatureDegree(weather?.temperature ?? 0)} '
             '/ ${l10n.temperatureDegree(weather?.feelsLike ?? 0)}',
+            style: context.theme.textTheme.bodyText1?.copyWith(
+              color: AppColor.white,
+            ),
           ),
           SizedBox(
             height: 4.h,
@@ -46,6 +53,9 @@ class HourlyWeather extends StatelessWidget {
           Text(
             '${l10n.percentage((weather?.precipitationProbability ?? 0) / 100)}'
             ' ${l10n.rain}',
+            style: context.theme.textTheme.bodyText1?.copyWith(
+              color: AppColor.white,
+            ),
           )
         ],
       ),
