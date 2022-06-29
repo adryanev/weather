@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:weather/app/routes/router.dart';
 import 'package:weather/core/presentation/mixins/error_message_handler.dart';
 import 'package:weather/core/utils/colors.dart';
 import 'package:weather/core/utils/constants.dart';
@@ -56,6 +58,12 @@ class WeatherPage extends StatelessWidget with ErrorMessageHandler {
                 ],
               ),
             ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            child: const Icon(Icons.question_mark),
+            onPressed: () {
+              context.pushNamed(AppRouter.about);
+            },
           ),
         ),
       ),
@@ -129,6 +137,7 @@ class WeatherPerHourCard extends StatelessWidget {
               '| ${DateTimeFormat.monthAbbrWithDate.format(now)}',
               style: Theme.of(context).textTheme.labelLarge?.copyWith(
                     fontWeight: FontWeight.w600,
+                    color: AppColor.white,
                   ),
             ),
             BlocBuilder<WeatherBloc, WeatherState>(

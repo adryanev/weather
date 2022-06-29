@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recase/recase.dart';
+import 'package:weather/core/utils/colors.dart';
 import 'package:weather/core/utils/context_extensions.dart';
 import 'package:weather/features/weather/presentation/bloc/weather_bloc.dart';
 
@@ -20,7 +21,9 @@ class HomeAppBar extends StatelessWidget {
               return Expanded(
                 child: Text(
                   state.location!.name.titleCase,
-                  style: context.theme.textTheme.bodyLarge,
+                  style: context.theme.textTheme.bodyLarge?.copyWith(
+                    color: AppColor.white,
+                  ),
                 ),
               );
             }

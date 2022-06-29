@@ -71,5 +71,7 @@
       }
     }
   },
-  "loading": "loading..."
+  "loading": "loading...",
+  "about": "about",
+  "license": "license"
 }

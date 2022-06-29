@@ -75,5 +75,7 @@
       }
     }
   },
-  "loading": "memuat..."
+  "loading": "memuat...",
+  "about": "tentang",
+  "license": "lisensi"
 }

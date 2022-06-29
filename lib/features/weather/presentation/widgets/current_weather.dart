@@ -36,7 +36,9 @@ class CurrentWeather extends StatelessWidget {
         Text(
           '${DateTimeFormat.dayString.format(now)} '
           '| ${DateTimeFormat.monthAbbrWithDate.format(now)}',
-          style: context.theme.textTheme.labelLarge,
+          style: context.theme.textTheme.labelLarge?.copyWith(
+            color: AppColor.white,
+          ),
         ),
         Text(
           l10n.temperatureDegree(weather?.temperature ?? 24),
@@ -46,7 +48,9 @@ class CurrentWeather extends StatelessWidget {
         ),
         Text(
           '${weather?.condition}',
-          style: context.theme.textTheme.labelLarge,
+          style: context.theme.textTheme.labelLarge?.copyWith(
+            color: AppColor.white,
+          ),
         ),
       ],
     );
