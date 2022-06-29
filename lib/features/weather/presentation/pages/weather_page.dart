@@ -150,7 +150,7 @@ class WeatherPerHourCard extends StatelessWidget {
                 final currentWeather = state.currentWeather?.hours
                     ?.where((element) => element.dateTime.hour >= now.hour)
                     .toList();
-                return Expanded(
+                return Flexible(
                   child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: currentWeather?.length,
