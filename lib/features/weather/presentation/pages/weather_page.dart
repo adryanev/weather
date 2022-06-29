@@ -94,6 +94,7 @@ class JumbotronCard extends StatelessWidget {
               return const Center(child: CircularProgressIndicator.adaptive());
             }
             return Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const HomeAppBar(),
                 CurrentWeather(weather: state.currentWeather),
