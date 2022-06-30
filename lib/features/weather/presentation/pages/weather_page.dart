@@ -94,6 +94,7 @@ class JumbotronCard extends StatelessWidget {
               return const Center(child: CircularProgressIndicator.adaptive());
             }
             return Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const HomeAppBar(),
                 CurrentWeather(weather: state.currentWeather),
@@ -150,7 +151,7 @@ class WeatherPerHourCard extends StatelessWidget {
                 final currentWeather = state.currentWeather?.hours
                     ?.where((element) => element.dateTime.hour >= now.hour)
                     .toList();
-                return Expanded(
+                return Flexible(
                   child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: currentWeather?.length,

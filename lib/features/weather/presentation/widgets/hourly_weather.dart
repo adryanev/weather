@@ -20,41 +20,57 @@ class HourlyWeather extends StatelessWidget {
     return Padding(
       padding: Dimension.aroundPadding,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            dateFormat.format(weather?.dateTime ?? DateTime.now()),
-            style: context.theme.textTheme.bodyText1?.copyWith(
+          Flexible(
+            child: Text(
+              dateFormat.format(weather?.dateTime ?? DateTime.now()),
+              style: context.theme.textTheme.bodyText1?.copyWith(
+                color: AppColor.white,
+              ),
+            ),
+          ),
+          Flexible(
+            child: SizedBox(
+              height: 8.h,
+            ),
+          ),
+          Flexible(
+            child: SvgPicture.asset(
+              weather == null
+                  ? Assets.icons.clearNight.path
+                  : 'assets/icons/${weather?.icon}.svg',
+              height: 32.h,
               color: AppColor.white,
             ),
           ),
-          SizedBox(
-            height: 8.h,
-          ),
-          SvgPicture.asset(
-            weather == null
-                ? Assets.icons.clearNight.path
-                : 'assets/icons/${weather?.icon}.svg',
-            height: 32.h,
-            color: AppColor.white,
-          ),
-          SizedBox(
-            height: 8.h,
-          ),
-          Text(
-            '${l10n.temperatureDegree(weather?.temperature ?? 0)} '
-            '/ ${l10n.temperatureDegree(weather?.feelsLike ?? 0)}',
-            style: context.theme.textTheme.bodyText1?.copyWith(
-              color: AppColor.white,
+          Flexible(
+            child: SizedBox(
+              height: 8.h,
             ),
           ),
-          SizedBox(
-            height: 4.h,
+          Flexible(
+            child: Text(
+              '${l10n.temperatureDegree(weather?.temperature ?? 0)} '
+              '/ ${l10n.temperatureDegree(weather?.feelsLike ?? 0)}',
+              style: context.theme.textTheme.bodyText1?.copyWith(
+                color: AppColor.white,
+              ),
+            ),
           ),
-          Text(
-            '${l10n.percentage((weather?.precipitationProbability ?? 0) / 100)}'
-            ' ${l10n.rain}',
-            style: context.theme.textTheme.bodyText1?.copyWith(
-              color: AppColor.white,
+          Flexible(
+            child: SizedBox(
+              height: 4.h,
+            ),
+          ),
+          Flexible(
+            child: Text(
+              '''
+${l10n.percentage((weather?.precipitationProbability ?? 0) / 100)}'''
+              ' ${l10n.rain}',
+              style: context.theme.textTheme.bodyText1?.copyWith(
+                color: AppColor.white,
+              ),
             ),
           )
         ],
